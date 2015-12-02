@@ -22,10 +22,7 @@
 @property (nonatomic,weak) IBOutlet UITextField *threeField;
 @property (nonatomic,weak) IBOutlet UITextField *fourField;
 
-
-@property (nonatomic,strong) LoginViewController *loginVC;
-
-
+@property (nonatomic,strong) NSMutableString *answerString;
 
 @end
 
@@ -40,8 +37,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    _loginVC=[[LoginViewController alloc]init];
+    _answerString=[[NSMutableString alloc]init];
     
+    [self addTextFieldObservers];
+    
+   
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -57,17 +57,21 @@
     
 }
 
+-(void)addTextFieldObservers{
+    
+    [_oneField addObserver:self forKeyPath:@"oneField" options:0 context:nil];
+    [_twoField addObserver:self forKeyPath:@"twoField" options:0 context:nil];
+    [_threeField addObserver:self forKeyPath:@"threeField" options:0 context:nil];
+    [_fourField addObserver:self forKeyPath:@"fourField" options:0 context:nil];
+    
+}
+
 
 
 -(void)setOneValue:(BOOL)oneValue{
     
     _oneValue=oneValue;
     
-    if (oneValue) {
-        
-        //[_oneField resignFirstResponder];
-      //  [_twoField becomeFirstResponder];
-    }
 }
 
 -(void)setTwoValue:(BOOL)twoValue{
@@ -97,9 +101,28 @@
     _fourValue=fourValue;
     if (fourValue) {
          [_fourField resignFirstResponder];
+        [_oneField resignFirstResponder];
+        [_twoField resignFirstResponder];
+        [_threeField resignFirstResponder];
         answered=YES;
+        
+        [self checkForAnswer];
     }
+    
    
+}
+
+-(void)checkForAnswer{
+    
+    _oneField.text=@"";
+    _twoField.text=@"";
+    _threeField.text=@"";
+    _fourField.text=@"";
+    _oneField.backgroundColor=[UIColor colorWithRed:99/255.0 green:214/255.0 blue:74/255.0 alpha:1];
+    _twoField.backgroundColor=[UIColor colorWithRed:99/255.0 green:214/255.0 blue:74/255.0 alpha:1];
+    _threeField.backgroundColor=[UIColor colorWithRed:99/255.0 green:214/255.0 blue:74/255.0 alpha:1];
+    _fourField.backgroundColor=[UIColor colorWithRed:99/255.0 green:214/255.0 blue:74/255.0 alpha:1];
+    
 }
 
 
@@ -139,13 +162,6 @@
 
 
 #pragma text field delegate methods
--(void)textFieldDidEndEditing:(UITextField *)textField{
-    
-  
-}
-
-
-
 
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     
@@ -156,21 +172,25 @@
     
     if (string.length==1) {
         
-        if (textField.text.length==1) {
+        if (textField.tag==1) {
             
-            [_oneField resignFirstResponder];
-            [_twoField becomeFirstResponder];
-        }
-        
-        if (textField.tag==2){
+            //magic has to be done here
+                if (textField.text.length==1) {
+                    [_oneField resignFirstResponder];
+                    [_twoField becomeFirstResponder];
+                }
+        }else if (textField.tag==2){  //this gets hit when third textfield is filled
+            
             [self setOneValue:NO];
             [self setTwoValue:YES];
            
-        }else if (textField.tag==3){
+        }else if (textField.tag==3){  //this gets hit when 4th textfield value is filled
+            
             [self setThreeValue:YES];
             [self setTwoValue:NO];
             [self setOneValue:NO];
         }else if (textField.tag==4){
+            
             [self setFourValue:YES];
             [self setOneValue:NO];
             [self setTwoValue:NO];
@@ -210,10 +230,18 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     NSLog(@"Begin editing");
     
+    if ([textField tag]==4) {
+        
+        [_answerString appendString:_fourField.text];
+        
+    }
     
 }
 
-
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    
+    
+}
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     NSLog(@"Should begin editing");
@@ -222,8 +250,14 @@
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
     NSLog(@"Should end editing");
+    
+    
+    [_answerString appendString:textField.text];
+    
+    
     return YES;
 }
+
 
 /*
 #pragma mark - Navigation
