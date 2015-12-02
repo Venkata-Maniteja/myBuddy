@@ -7,16 +7,16 @@
 //
 
 #import "LoginViewController.h"
+#import <LocalAuthentication/LocalAuthentication.h>
+#import "StackView.h"
+#import <AudioToolbox/AudioToolbox.h> 
+
 @interface LoginViewController ()<UITextFieldDelegate>{
     
     BOOL answered;
 }
 
-@property (nonatomic,assign)    BOOL    oneValue;
-@property (nonatomic,assign)    BOOL    twoValue;
-@property (nonatomic,assign)    BOOL    threeValue;
-@property (nonatomic,assign)    BOOL    fourValue;
-
+@property (nonatomic,weak)IBOutlet StackView *stackView;
 @property (nonatomic,weak) IBOutlet UITextField *oneField;
 @property (nonatomic,weak) IBOutlet UITextField *twoField;
 @property (nonatomic,weak) IBOutlet UITextField *threeField;
@@ -27,10 +27,6 @@
 @end
 
 @implementation LoginViewController
-@synthesize oneValue=_oneValue;
-@synthesize twoValue=_twoValue;
-@synthesize threeValue=_threeValue;
-@synthesize fourValue=_fourValue;
 
 
 - (void)viewDidLoad {
@@ -55,62 +51,21 @@
     
     [_oneField becomeFirstResponder];
     
+    
+    
 }
 
 -(void)addTextFieldObservers{
     
-    [_oneField addObserver:self forKeyPath:@"oneField" options:0 context:nil];
-    [_twoField addObserver:self forKeyPath:@"twoField" options:0 context:nil];
-    [_threeField addObserver:self forKeyPath:@"threeField" options:0 context:nil];
-    [_fourField addObserver:self forKeyPath:@"fourField" options:0 context:nil];
+    
+    [_oneField addTarget:self action:@selector(textFieldDidChange:)forControlEvents:UIControlEventEditingChanged];
+    [_twoField addTarget:self action:@selector(textFieldDidChange:)forControlEvents:UIControlEventEditingChanged];
+    [_threeField addTarget:self action:@selector(textFieldDidChange:)forControlEvents:UIControlEventEditingChanged];
+    [_fourField addTarget:self action:@selector(textFieldDidChange:)forControlEvents:UIControlEventEditingChanged];
     
 }
 
 
-
--(void)setOneValue:(BOOL)oneValue{
-    
-    _oneValue=oneValue;
-    
-}
-
--(void)setTwoValue:(BOOL)twoValue{
-    
-    _twoValue=twoValue;
-    
-    if (twoValue) {
-     
-        [_twoField resignFirstResponder];
-        [_threeField becomeFirstResponder];
-    }
-}
-
--(void)setThreeValue:(BOOL)threeValue{
-    
-    _threeValue=threeValue;
-    
-    if (threeValue) {
-        [_threeField resignFirstResponder];
-        [_fourField becomeFirstResponder];
-    }
-    
-}
-
--(void)setFourValue:(BOOL)fourValue{
-    
-    _fourValue=fourValue;
-    if (fourValue) {
-         [_fourField resignFirstResponder];
-        [_oneField resignFirstResponder];
-        [_twoField resignFirstResponder];
-        [_threeField resignFirstResponder];
-        answered=YES;
-        
-        [self checkForAnswer];
-    }
-    
-   
-}
 
 -(void)checkForAnswer{
     
@@ -118,11 +73,33 @@
     _twoField.text=@"";
     _threeField.text=@"";
     _fourField.text=@"";
-    _oneField.backgroundColor=[UIColor colorWithRed:99/255.0 green:214/255.0 blue:74/255.0 alpha:1];
-    _twoField.backgroundColor=[UIColor colorWithRed:99/255.0 green:214/255.0 blue:74/255.0 alpha:1];
-    _threeField.backgroundColor=[UIColor colorWithRed:99/255.0 green:214/255.0 blue:74/255.0 alpha:1];
-    _fourField.backgroundColor=[UIColor colorWithRed:99/255.0 green:214/255.0 blue:74/255.0 alpha:1];
     
+    if ([_answerString isEqualToString:@"1234"]) {
+        
+        _oneField.backgroundColor=[UIColor colorWithRed:99/255.0 green:214/255.0 blue:74/255.0 alpha:1]; //green color
+        _twoField.backgroundColor=[UIColor colorWithRed:99/255.0 green:214/255.0 blue:74/255.0 alpha:1];
+        _threeField.backgroundColor=[UIColor colorWithRed:99/255.0 green:214/255.0 blue:74/255.0 alpha:1];
+        _fourField.backgroundColor=[UIColor colorWithRed:99/255.0 green:214/255.0 blue:74/255.0 alpha:1];
+        
+        answered=YES;
+        
+        
+        
+    }else{
+        
+        _oneField.backgroundColor=[UIColor colorWithRed:228/255.0 green:31/255.0 blue:54/255.0 alpha:1]; //green color
+        _twoField.backgroundColor=[UIColor colorWithRed:228/255.0 green:31/255.0 blue:54/255.0 alpha:1];
+        _threeField.backgroundColor=[UIColor colorWithRed:228/255.0 green:31/255.0 blue:54/255.0 alpha:1];
+        _fourField.backgroundColor=[UIColor colorWithRed:228/255.0 green:31/255.0 blue:54/255.0 alpha:1];
+        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+        [_stackView addStackViewAnimation];
+        
+        [_oneField becomeFirstResponder];
+        
+        [_answerString setString:@""];
+
+        
+    }
 }
 
 
@@ -170,48 +147,23 @@
     if (!answered) {
         
     
-    if (string.length==1) {
-        
-        if (textField.tag==1) {
-            
-            //magic has to be done here
-                if (textField.text.length==1) {
-                    [_oneField resignFirstResponder];
-                    [_twoField becomeFirstResponder];
-                }
-        }else if (textField.tag==2){  //this gets hit when third textfield is filled
-            
-            [self setOneValue:NO];
-            [self setTwoValue:YES];
-           
-        }else if (textField.tag==3){  //this gets hit when 4th textfield value is filled
-            
-            [self setThreeValue:YES];
-            [self setTwoValue:NO];
-            [self setOneValue:NO];
-        }else if (textField.tag==4){
-            
-            [self setFourValue:YES];
-            [self setOneValue:NO];
-            [self setTwoValue:NO];
-            [self setThreeValue:NO];
-            
-        }
-        return YES;
-    }
-    if ([string length]==0) {
-        
-        NSLog(@"deleted");
-        
-        return YES;
-    }
+            if (string.length==1) {
+                
+                return YES;
+            }
+            if ([string length]==0) {
+                
+                NSLog(@"deleted");
+                
+                return YES;
+            }
     }
     else{
         
-        return NO;
+                return NO;
     }
 
-    return YES;
+                return YES;
    
 }
 
@@ -230,11 +182,6 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     NSLog(@"Begin editing");
     
-    if ([textField tag]==4) {
-        
-        [_answerString appendString:_fourField.text];
-        
-    }
     
 }
 
@@ -252,10 +199,128 @@
     NSLog(@"Should end editing");
     
     
-    [_answerString appendString:textField.text];
+    
     
     
     return YES;
+}
+
+-(void)textFieldDidChange:(id)sender{
+    
+    UITextField *textField=(UITextField *)sender;
+    
+    
+    
+    [_answerString appendString:textField.text];
+    
+    if ([textField tag]==1) {
+        
+        [_oneField resignFirstResponder];
+        [_twoField becomeFirstResponder];
+        
+    }
+    
+    if ([textField tag]==2) {
+        
+        [_twoField resignFirstResponder];
+        [_threeField becomeFirstResponder];
+        
+    }
+    
+    if ([textField tag]==3) {
+        
+        [_threeField resignFirstResponder];
+        [_fourField becomeFirstResponder];
+
+    }
+    
+    if ([textField tag]==4) {
+        
+        [_fourField resignFirstResponder];
+        
+        [self checkForAnswer];
+        
+        
+    }
+    
+    
+}
+
+-(void)showAlertWithTitle:(NSString *)title message:(NSString *)message{
+    
+    
+    UIAlertController *aCon=[UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *ok=[UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        [aCon dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    [aCon addAction:ok];
+    
+    [self presentViewController:aCon animated:YES completion:nil];
+}
+
+-(void)authenticateUser{
+    
+    LAContext *context=[[LAContext alloc]init];
+    
+    NSError *authError = nil;
+    
+    NSString *myLocalizedReasonString = @"Used for quick and secure access to the login the app";
+
+    
+    if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError]) {
+        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
+                  localizedReason:myLocalizedReasonString
+                            reply:^(BOOL success, NSError *error) {
+                                if (success) {
+                                    // User authenticated successfully, take appropriate action
+                                    
+                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                        
+                                        [self showAlertWithTitle:@"Log in Success" message:@":D"];
+                                        
+                                        [_stackView addStackViewAnimationWithCompletion:^(BOOL finished) {
+                                            
+                                            NSLog(@"animation completed");
+                                        }];
+                                        
+                                    });
+                                } else {
+                                    // User did not authenticate successfully, look at error and take appropriate action
+                                    
+                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                        
+                                    switch (error.code) {
+                                        case LAErrorSystemCancel:
+                                                        [self showAlertWithTitle:@"Log in Failed" message:@"The system stopped the authentication process because another application became active"];
+                                            break;
+                                        case LAErrorPasscodeNotSet:
+                                            
+                                                        [self showAlertWithTitle:@"Log in Failed" message:@"No passcode has been set by the user in the device’s Settings."];
+                                            break;
+                                            
+                                        case LAErrorAuthenticationFailed:
+                                            
+                                                        [self showAlertWithTitle:@"Log in Failed" message:@"Please use correct finger and try again"];
+                                            break;
+                                            
+                                        default:
+                                                        [self showAlertWithTitle:@"Log in Failed" message:[error localizedDescription]];
+                                            break;
+                                    }
+                                    
+                                        
+                                    });
+
+                                }
+                            }];
+    } else {
+        // Could not evaluate policy; look at authError and present an appropriate message to user
+    }
+
+    
 }
 
 

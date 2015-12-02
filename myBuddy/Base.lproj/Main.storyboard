@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qyZ-2p-Erk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,117 +18,101 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BmH-Pk-QBc">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oga-fe-Xlh" customClass="StackView">
                                 <rect key="frame" x="20" y="137" width="560" height="110"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vny-Oy-7AS" customClass="LoginTextField">
-                                        <rect key="frame" x="0.0" y="0.0" width="133" height="110"/>
+                                    <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BmH-Pk-QBc">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="110"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vny-Oy-7AS" customClass="LoginTextField">
+                                                <rect key="frame" x="0.0" y="0.0" width="133" height="110"/>
+                                                <animations/>
+                                                <color key="textColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="8bD-9R-91E"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ph5-GS-QxO" customClass="LoginTextField">
+                                                <rect key="frame" x="143" y="0.0" width="132" height="110"/>
+                                                <animations/>
+                                                <color key="textColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JEO-zk-vpX"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vtd-He-jhn" customClass="LoginTextField">
+                                                <rect key="frame" x="285" y="0.0" width="133" height="110"/>
+                                                <animations/>
+                                                <color key="textColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2vr-NN-zPu"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eKF-yf-8pi" customClass="LoginTextField">
+                                                <rect key="frame" x="428" y="0.0" width="132" height="110"/>
+                                                <animations/>
+                                                <color key="textColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="PTD-so-64B"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
                                         <animations/>
-                                        <color key="textColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="8bD-9R-91E"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ph5-GS-QxO" customClass="LoginTextField">
-                                        <rect key="frame" x="143" y="0.0" width="132" height="110"/>
-                                        <animations/>
-                                        <color key="textColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="JEO-zk-vpX"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vtd-He-jhn" customClass="LoginTextField">
-                                        <rect key="frame" x="285" y="0.0" width="133" height="110"/>
-                                        <animations/>
-                                        <color key="textColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="2vr-NN-zPu"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eKF-yf-8pi" customClass="LoginTextField">
-                                        <rect key="frame" x="428" y="0.0" width="132" height="110"/>
-                                        <animations/>
-                                        <color key="textColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="PTD-so-64B"/>
-                                        </connections>
-                                    </textField>
+                                        <color key="backgroundColor" red="0.0" green="0.2785547223" blue="0.90090144230000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="eKF-yf-8pi" firstAttribute="height" secondItem="Vny-Oy-7AS" secondAttribute="height" id="AW1-aR-MOY"/>
+                                            <constraint firstItem="eKF-yf-8pi" firstAttribute="width" secondItem="Vny-Oy-7AS" secondAttribute="width" id="PEe-5N-9Cq"/>
+                                            <constraint firstItem="vtd-He-jhn" firstAttribute="width" secondItem="Vny-Oy-7AS" secondAttribute="width" id="UcV-pD-6Pj"/>
+                                            <constraint firstItem="ph5-GS-QxO" firstAttribute="width" secondItem="Vny-Oy-7AS" secondAttribute="width" id="VIL-C2-rLM"/>
+                                            <constraint firstItem="ph5-GS-QxO" firstAttribute="height" secondItem="Vny-Oy-7AS" secondAttribute="height" id="vrV-uw-Xyu"/>
+                                            <constraint firstItem="vtd-He-jhn" firstAttribute="height" secondItem="Vny-Oy-7AS" secondAttribute="height" id="xbY-HR-YQ2"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.0" green="0.2785547223" blue="0.90090144230000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="58H-uJ-Gib"/>
-                                    <constraint firstItem="eKF-yf-8pi" firstAttribute="height" secondItem="Vny-Oy-7AS" secondAttribute="height" id="AW1-aR-MOY"/>
-                                    <constraint firstItem="eKF-yf-8pi" firstAttribute="width" secondItem="Vny-Oy-7AS" secondAttribute="width" id="PEe-5N-9Cq"/>
-                                    <constraint firstItem="vtd-He-jhn" firstAttribute="width" secondItem="Vny-Oy-7AS" secondAttribute="width" id="UcV-pD-6Pj"/>
-                                    <constraint firstItem="ph5-GS-QxO" firstAttribute="width" secondItem="Vny-Oy-7AS" secondAttribute="width" id="VIL-C2-rLM"/>
-                                    <constraint firstItem="ph5-GS-QxO" firstAttribute="height" secondItem="Vny-Oy-7AS" secondAttribute="height" id="vrV-uw-Xyu"/>
-                                    <constraint firstItem="vtd-He-jhn" firstAttribute="height" secondItem="Vny-Oy-7AS" secondAttribute="height" id="xbY-HR-YQ2"/>
+                                    <constraint firstAttribute="height" constant="110" id="D2S-0l-dTd"/>
+                                    <constraint firstItem="BmH-Pk-QBc" firstAttribute="top" secondItem="oga-fe-Xlh" secondAttribute="top" id="DKe-CX-ZyP"/>
+                                    <constraint firstItem="BmH-Pk-QBc" firstAttribute="leading" secondItem="oga-fe-Xlh" secondAttribute="leading" id="V6m-Zr-eza"/>
+                                    <constraint firstAttribute="trailing" secondItem="BmH-Pk-QBc" secondAttribute="trailing" id="eFA-VD-GpC"/>
+                                    <constraint firstAttribute="bottom" secondItem="BmH-Pk-QBc" secondAttribute="bottom" id="szN-Tz-tBM"/>
                                 </constraints>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpk-fD-5hE">
-                                <rect key="frame" x="275" y="69" width="50" height="21"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Passcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpk-fD-5hE">
+                                <rect key="frame" x="241" y="87" width="119" height="21"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="oHW-Xv-7eV"/>
-                                    <constraint firstAttribute="width" constant="50" id="zOn-Vg-EpM"/>
+                                    <constraint firstAttribute="width" constant="119" id="zOn-Vg-EpM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1B-A7-2qI">
-                                <rect key="frame" x="291" y="270" width="19" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Touch ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZv-9k-vch">
-                                <rect key="frame" x="249" y="325" width="103" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VPa-Xf-ZdZ">
-                                <rect key="frame" x="181" y="311" width="45" height="49"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="RYz-vv-utL"/>
-                                    <constraint firstAttribute="height" constant="49" id="sh1-08-1Sn"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BmH-Pk-QBc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="13F-M8-D0Q"/>
-                            <constraint firstItem="c1B-A7-2qI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5sL-oX-Ggh"/>
-                            <constraint firstItem="BmH-Pk-QBc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Cim-hQ-eit"/>
                             <constraint firstItem="Bpk-fD-5hE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IbO-dW-crf"/>
-                            <constraint firstItem="BmH-Pk-QBc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lt6-ZY-ndX"/>
-                            <constraint firstItem="BmH-Pk-QBc" firstAttribute="top" secondItem="Bpk-fD-5hE" secondAttribute="bottom" constant="47" id="VH3-rp-R3I"/>
-                            <constraint firstItem="c1B-A7-2qI" firstAttribute="top" secondItem="BmH-Pk-QBc" secondAttribute="bottom" constant="23" id="Xaf-z2-U7B"/>
-                            <constraint firstItem="hZv-9k-vch" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YpW-g6-snk"/>
-                            <constraint firstItem="hZv-9k-vch" firstAttribute="leading" secondItem="VPa-Xf-ZdZ" secondAttribute="trailing" constant="23" id="ejI-dH-uZV"/>
-                            <constraint firstItem="VPa-Xf-ZdZ" firstAttribute="top" secondItem="ph5-GS-QxO" secondAttribute="bottom" constant="64" id="kNU-9L-XZx"/>
-                            <constraint firstItem="BmH-Pk-QBc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="117" id="mGw-jU-nE9"/>
-                            <constraint firstItem="Bpk-fD-5hE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="mbC-eo-Fi7"/>
-                            <constraint firstItem="hZv-9k-vch" firstAttribute="top" secondItem="c1B-A7-2qI" secondAttribute="bottom" constant="34" id="q3n-Eu-q9O"/>
+                            <constraint firstItem="oga-fe-Xlh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="L7j-xc-Hek"/>
+                            <constraint firstItem="oga-fe-Xlh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="O21-8e-lpW"/>
+                            <constraint firstItem="oga-fe-Xlh" firstAttribute="top" secondItem="Bpk-fD-5hE" secondAttribute="bottom" constant="29" id="gwl-IM-hfN"/>
+                            <constraint firstItem="Bpk-fD-5hE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="67" id="mbC-eo-Fi7"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="fourField" destination="eKF-yf-8pi" id="CEx-Q1-eFM"/>
                         <outlet property="oneField" destination="Vny-Oy-7AS" id="E84-OZ-Y48"/>
+                        <outlet property="stackView" destination="oga-fe-Xlh" id="vDv-AC-74S"/>
                         <outlet property="threeField" destination="vtd-He-jhn" id="rnX-Bw-543"/>
                         <outlet property="twoField" destination="ph5-GS-QxO" id="yFS-In-JqI"/>
                     </connections>
@@ -151,8 +135,10 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fLK-Wg-TCL">
                                 <rect key="frame" x="37" y="56" width="523" height="507"/>
+                                <animations/>
                             </imageView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xU4-dM-p6H" firstAttribute="top" secondItem="fLK-Wg-TCL" secondAttribute="bottom" constant="37" id="2hh-Eh-dvQ"/>
@@ -176,6 +162,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zmc-m7-dSi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="sRu-4g-NgE" detailTextLabel="GYE-c6-04S" style="IBUITableViewCellStyleSubtitle" id="dBD-IV-lsQ">
@@ -188,6 +175,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sRu-4g-NgE">
                                             <rect key="frame" x="15" y="5" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -195,12 +183,15 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GYE-c6-04S">
                                             <rect key="frame" x="15" y="25" width="41" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <animations/>
                                 </tableViewCellContentView>
+                                <animations/>
                             </tableViewCell>
                         </prototypes>
                         <connections>

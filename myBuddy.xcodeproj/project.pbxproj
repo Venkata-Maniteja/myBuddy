@@ -10,12 +10,15 @@
 		5DE967B21C0EC6C600DC62F9 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE967B11C0EC6C600DC62F9 /* ListViewController.m */; };
 		5DE967B51C0EC6EB00DC62F9 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE967B41C0EC6EB00DC62F9 /* CameraViewController.m */; };
 		5DE967B71C0ECAA900DC62F9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE967B61C0ECAA900DC62F9 /* libsqlite3.0.tbd */; };
+		B800301C1C0F2B5A004B0565 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B800301B1C0F2B5A004B0565 /* Launch Screen.storyboard */; };
+		B80030221C0F3E50004B0565 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B80030211C0F3E50004B0565 /* LocalAuthentication.framework */; };
+		B80030251C0F47D9004B0565 /* StackView.m in Sources */ = {isa = PBXBuildFile; fileRef = B80030241C0F47D9004B0565 /* StackView.m */; };
+		B800302A1C0F4DB7004B0565 /* Screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = B80030291C0F4DB7004B0565 /* Screenshot.png */; };
 		B80D9D151C0C8CCE004A1FF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B80D9D141C0C8CCE004A1FF6 /* main.m */; };
 		B80D9D181C0C8CCE004A1FF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B80D9D171C0C8CCE004A1FF6 /* AppDelegate.m */; };
 		B80D9D1B1C0C8CCE004A1FF6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B80D9D1A1C0C8CCE004A1FF6 /* ViewController.m */; };
 		B80D9D1E1C0C8CCE004A1FF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B80D9D1C1C0C8CCE004A1FF6 /* Main.storyboard */; };
 		B80D9D201C0C8CCE004A1FF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B80D9D1F1C0C8CCE004A1FF6 /* Assets.xcassets */; };
-		B80D9D231C0C8CCE004A1FF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B80D9D211C0C8CCE004A1FF6 /* LaunchScreen.storyboard */; };
 		B8192C981C0E26DD006E8E7E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8192C971C0E26DD006E8E7E /* LoginViewController.m */; };
 		B8192C9B1C0E319D006E8E7E /* LoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B8192C9A1C0E319D006E8E7E /* LoginTextField.m */; };
 /* End PBXBuildFile section */
@@ -26,6 +29,11 @@
 		5DE967B31C0EC6EB00DC62F9 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = ../CameraViewController.h; sourceTree = "<group>"; };
 		5DE967B41C0EC6EB00DC62F9 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = ../CameraViewController.m; sourceTree = "<group>"; };
 		5DE967B61C0ECAA900DC62F9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		B800301B1C0F2B5A004B0565 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
+		B80030211C0F3E50004B0565 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		B80030231C0F47D9004B0565 /* StackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackView.h; sourceTree = "<group>"; };
+		B80030241C0F47D9004B0565 /* StackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackView.m; sourceTree = "<group>"; };
+		B80030291C0F4DB7004B0565 /* Screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot.png; sourceTree = "<group>"; };
 		B80D9D101C0C8CCE004A1FF6 /* myBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B80D9D141C0C8CCE004A1FF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B80D9D161C0C8CCE004A1FF6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -34,7 +42,6 @@
 		B80D9D1A1C0C8CCE004A1FF6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B80D9D1D1C0C8CCE004A1FF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B80D9D1F1C0C8CCE004A1FF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B80D9D221C0C8CCE004A1FF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B80D9D241C0C8CCE004A1FF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8192C961C0E26DD006E8E7E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		B8192C971C0E26DD006E8E7E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -47,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B80030221C0F3E50004B0565 /* LocalAuthentication.framework in Frameworks */,
 				5DE967B71C0ECAA900DC62F9 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,9 +62,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B800302B1C0F54CC004B0565 /* AnimationViews */ = {
+			isa = PBXGroup;
+			children = (
+				B80030231C0F47D9004B0565 /* StackView.h */,
+				B80030241C0F47D9004B0565 /* StackView.m */,
+			);
+			name = AnimationViews;
+			sourceTree = "<group>";
+		};
 		B80D9D071C0C8CCD004A1FF6 = {
 			isa = PBXGroup;
 			children = (
+				B80030211C0F3E50004B0565 /* LocalAuthentication.framework */,
 				5DE967B61C0ECAA900DC62F9 /* libsqlite3.0.tbd */,
 				B80D9D121C0C8CCE004A1FF6 /* myBuddy */,
 				B80D9D111C0C8CCE004A1FF6 /* Products */,
@@ -84,11 +102,13 @@
 				B8192C9A1C0E319D006E8E7E /* LoginTextField.m */,
 				5DE967B31C0EC6EB00DC62F9 /* CameraViewController.h */,
 				5DE967B41C0EC6EB00DC62F9 /* CameraViewController.m */,
+				B80030291C0F4DB7004B0565 /* Screenshot.png */,
+				B800302B1C0F54CC004B0565 /* AnimationViews */,
 				5DE967B01C0EC6C600DC62F9 /* ListViewController.h */,
 				5DE967B11C0EC6C600DC62F9 /* ListViewController.m */,
 				B80D9D1C1C0C8CCE004A1FF6 /* Main.storyboard */,
+				B800301B1C0F2B5A004B0565 /* Launch Screen.storyboard */,
 				B80D9D1F1C0C8CCE004A1FF6 /* Assets.xcassets */,
-				B80D9D211C0C8CCE004A1FF6 /* LaunchScreen.storyboard */,
 				B80D9D241C0C8CCE004A1FF6 /* Info.plist */,
 				B80D9D131C0C8CCE004A1FF6 /* Supporting Files */,
 			);
@@ -160,9 +180,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B80D9D231C0C8CCE004A1FF6 /* LaunchScreen.storyboard in Resources */,
+				B800301C1C0F2B5A004B0565 /* Launch Screen.storyboard in Resources */,
 				B80D9D201C0C8CCE004A1FF6 /* Assets.xcassets in Resources */,
 				B80D9D1E1C0C8CCE004A1FF6 /* Main.storyboard in Resources */,
+				B800302A1C0F4DB7004B0565 /* Screenshot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +201,7 @@
 				B80D9D151C0C8CCE004A1FF6 /* main.m in Sources */,
 				5DE967B51C0EC6EB00DC62F9 /* CameraViewController.m in Sources */,
 				B8192C9B1C0E319D006E8E7E /* LoginTextField.m in Sources */,
+				B80030251C0F47D9004B0565 /* StackView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,14 +214,6 @@
 				B80D9D1D1C0C8CCE004A1FF6 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B80D9D211C0C8CCE004A1FF6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B80D9D221C0C8CCE004A1FF6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
