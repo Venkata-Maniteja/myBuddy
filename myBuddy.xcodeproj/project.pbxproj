@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4412A87D6089B9D779A84D58 /* libPods-myBuddy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D66073C8996CF29B52B1C3E /* libPods-myBuddy.a */; };
 		5DE967B21C0EC6C600DC62F9 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE967B11C0EC6C600DC62F9 /* ListViewController.m */; };
 		5DE967B51C0EC6EB00DC62F9 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE967B41C0EC6EB00DC62F9 /* CameraViewController.m */; };
 		5DE967B71C0ECAA900DC62F9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE967B61C0ECAA900DC62F9 /* libsqlite3.0.tbd */; };
@@ -25,11 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D66073C8996CF29B52B1C3E /* libPods-myBuddy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myBuddy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE967B01C0EC6C600DC62F9 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListViewController.h; path = ../ListViewController.h; sourceTree = "<group>"; };
 		5DE967B11C0EC6C600DC62F9 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListViewController.m; path = ../ListViewController.m; sourceTree = "<group>"; };
 		5DE967B31C0EC6EB00DC62F9 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = ../CameraViewController.h; sourceTree = "<group>"; };
 		5DE967B41C0EC6EB00DC62F9 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = ../CameraViewController.m; sourceTree = "<group>"; };
 		5DE967B61C0ECAA900DC62F9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		AEC124612D5D072C84ACE65F /* Pods-myBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-myBuddy/Pods-myBuddy.release.xcconfig"; sourceTree = "<group>"; };
 		B800301B1C0F2B5A004B0565 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B80030211C0F3E50004B0565 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		B80030231C0F47D9004B0565 /* StackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackView.h; sourceTree = "<group>"; };
@@ -50,6 +53,7 @@
 		B8192C971C0E26DD006E8E7E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B8192C991C0E319D006E8E7E /* LoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTextField.h; sourceTree = "<group>"; };
 		B8192C9A1C0E319D006E8E7E /* LoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTextField.m; sourceTree = "<group>"; };
+		D14065A071F8D4C71700CC4B /* Pods-myBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-myBuddy/Pods-myBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +63,22 @@
 			files = (
 				B80030221C0F3E50004B0565 /* LocalAuthentication.framework in Frameworks */,
 				5DE967B71C0ECAA900DC62F9 /* libsqlite3.0.tbd in Frameworks */,
+				4412A87D6089B9D779A84D58 /* libPods-myBuddy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC33D071CA334890E0057192 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D14065A071F8D4C71700CC4B /* Pods-myBuddy.debug.xcconfig */,
+				AEC124612D5D072C84ACE65F /* Pods-myBuddy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B800302B1C0F54CC004B0565 /* AnimationViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +95,8 @@
 				5DE967B61C0ECAA900DC62F9 /* libsqlite3.0.tbd */,
 				B80D9D121C0C8CCE004A1FF6 /* myBuddy */,
 				B80D9D111C0C8CCE004A1FF6 /* Products */,
+				AC33D071CA334890E0057192 /* Pods */,
+				EE7F6399C0D8598BA76BA772 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +144,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EE7F6399C0D8598BA76BA772 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D66073C8996CF29B52B1C3E /* libPods-myBuddy.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B80D9D271C0C8CCE004A1FF6 /* Build configuration list for PBXNativeTarget "myBuddy" */;
 			buildPhases = (
+				FE5DFA0430CEB86763DAB38F /* Check Pods Manifest.lock */,
 				B80D9D0C1C0C8CCE004A1FF6 /* Sources */,
 				B80D9D0D1C0C8CCE004A1FF6 /* Frameworks */,
 				B80D9D0E1C0C8CCE004A1FF6 /* Resources */,
+				6A6EA873E10BD3EA9607369B /* Embed Pods Frameworks */,
+				40A9ACC41350B170CE94BE1D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +220,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40A9ACC41350B170CE94BE1D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-myBuddy/Pods-myBuddy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A6EA873E10BD3EA9607369B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-myBuddy/Pods-myBuddy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE5DFA0430CEB86763DAB38F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B80D9D0C1C0C8CCE004A1FF6 /* Sources */ = {
@@ -307,6 +382,7 @@
 		};
 		B80D9D281C0C8CCE004A1FF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D14065A071F8D4C71700CC4B /* Pods-myBuddy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = myBuddy/Info.plist;
@@ -318,6 +394,7 @@
 		};
 		B80D9D291C0C8CCE004A1FF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEC124612D5D072C84ACE65F /* Pods-myBuddy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = myBuddy/Info.plist;
