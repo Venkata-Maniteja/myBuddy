@@ -21,6 +21,11 @@
 */
 
 
+
+
+
+
+
 - (CGRect)caretRectForPosition:(UITextPosition *)position
 {
     return CGRectZero;

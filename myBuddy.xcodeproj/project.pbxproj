@@ -14,6 +14,7 @@
 		B80030221C0F3E50004B0565 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B80030211C0F3E50004B0565 /* LocalAuthentication.framework */; };
 		B80030251C0F47D9004B0565 /* StackView.m in Sources */ = {isa = PBXBuildFile; fileRef = B80030241C0F47D9004B0565 /* StackView.m */; };
 		B800302A1C0F4DB7004B0565 /* Screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = B80030291C0F4DB7004B0565 /* Screenshot.png */; };
+		B800302E1C0F8FFE004B0565 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B800302D1C0F8FFE004B0565 /* TabBarController.m */; };
 		B80D9D151C0C8CCE004A1FF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B80D9D141C0C8CCE004A1FF6 /* main.m */; };
 		B80D9D181C0C8CCE004A1FF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B80D9D171C0C8CCE004A1FF6 /* AppDelegate.m */; };
 		B80D9D1B1C0C8CCE004A1FF6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B80D9D1A1C0C8CCE004A1FF6 /* ViewController.m */; };
@@ -34,6 +35,8 @@
 		B80030231C0F47D9004B0565 /* StackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackView.h; sourceTree = "<group>"; };
 		B80030241C0F47D9004B0565 /* StackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackView.m; sourceTree = "<group>"; };
 		B80030291C0F4DB7004B0565 /* Screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot.png; sourceTree = "<group>"; };
+		B800302C1C0F8FFE004B0565 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		B800302D1C0F8FFE004B0565 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		B80D9D101C0C8CCE004A1FF6 /* myBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B80D9D141C0C8CCE004A1FF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B80D9D161C0C8CCE004A1FF6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 				B8192C9A1C0E319D006E8E7E /* LoginTextField.m */,
 				5DE967B31C0EC6EB00DC62F9 /* CameraViewController.h */,
 				5DE967B41C0EC6EB00DC62F9 /* CameraViewController.m */,
+				B800302C1C0F8FFE004B0565 /* TabBarController.h */,
+				B800302D1C0F8FFE004B0565 /* TabBarController.m */,
 				B80030291C0F4DB7004B0565 /* Screenshot.png */,
 				B800302B1C0F54CC004B0565 /* AnimationViews */,
 				5DE967B01C0EC6C600DC62F9 /* ListViewController.h */,
@@ -197,6 +202,7 @@
 				B8192C981C0E26DD006E8E7E /* LoginViewController.m in Sources */,
 				B80D9D1B1C0C8CCE004A1FF6 /* ViewController.m in Sources */,
 				5DE967B21C0EC6C600DC62F9 /* ListViewController.m in Sources */,
+				B800302E1C0F8FFE004B0565 /* TabBarController.m in Sources */,
 				B80D9D181C0C8CCE004A1FF6 /* AppDelegate.m in Sources */,
 				B80D9D151C0C8CCE004A1FF6 /* main.m in Sources */,
 				5DE967B51C0EC6EB00DC62F9 /* CameraViewController.m in Sources */,

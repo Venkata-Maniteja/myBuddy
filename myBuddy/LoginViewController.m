@@ -10,10 +10,13 @@
 #import <LocalAuthentication/LocalAuthentication.h>
 #import "StackView.h"
 #import <AudioToolbox/AudioToolbox.h> 
+#import "TabBarController.h"
 
 @interface LoginViewController ()<UITextFieldDelegate>{
     
     BOOL answered;
+    BOOL savedKey;
+    BOOL isSecondRegister;
 }
 
 @property (nonatomic,weak)IBOutlet StackView *stackView;
@@ -23,6 +26,11 @@
 @property (nonatomic,weak) IBOutlet UITextField *fourField;
 
 @property (nonatomic,strong) NSMutableString *answerString;
+@property (nonatomic,strong) NSMutableString *savedKeyString;
+@property (nonatomic,strong) NSMutableString *secondTimePasscodeString;
+@property (nonatomic,strong) NSMutableString *firstTimePasscodeString;
+
+@property (nonatomic,weak) IBOutlet UILabel *statusLabel;
 
 @end
 
@@ -34,9 +42,23 @@
     // Do any additional setup after loading the view.
     
     _answerString=[[NSMutableString alloc]init];
+    _savedKeyString=[[NSMutableString alloc]init];
+    _firstTimePasscodeString=[[NSMutableString alloc]init];
+    _secondTimePasscodeString=[[NSMutableString alloc]init];
+    
+    savedKey=[[NSUserDefaults standardUserDefaults]boolForKey:@"RegisteredKey"];
     
     [self addTextFieldObservers];
     
+    if (savedKey) {
+        
+        _statusLabel.text=@"Enter passcode";
+        
+    }else{
+        
+        _statusLabel.text=@"Register your passcode";
+        
+    }
    
 }
 
@@ -44,6 +66,8 @@
     [super viewWillAppear:animated];
     
     [self customiseTextFields];
+    
+    [self authenticateUser];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -74,7 +98,9 @@
     _threeField.text=@"";
     _fourField.text=@"";
     
-    if ([_answerString isEqualToString:@"1234"]) {
+    NSString *answer=[[NSUserDefaults standardUserDefaults]objectForKey:@"savedPasscode"];
+    
+    if ([_answerString isEqualToString:answer]) {
         
         _oneField.backgroundColor=[UIColor colorWithRed:99/255.0 green:214/255.0 blue:74/255.0 alpha:1]; //green color
         _twoField.backgroundColor=[UIColor colorWithRed:99/255.0 green:214/255.0 blue:74/255.0 alpha:1];
@@ -83,11 +109,16 @@
         
         answered=YES;
         
+        TabBarController *tabVC=[self.storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
+        
+        [self presentViewController:tabVC animated:YES completion:nil];
+        
+        
         
         
     }else{
         
-        _oneField.backgroundColor=[UIColor colorWithRed:228/255.0 green:31/255.0 blue:54/255.0 alpha:1]; //green color
+        _oneField.backgroundColor=[UIColor colorWithRed:228/255.0 green:31/255.0 blue:54/255.0 alpha:1]; //red color
         _twoField.backgroundColor=[UIColor colorWithRed:228/255.0 green:31/255.0 blue:54/255.0 alpha:1];
         _threeField.backgroundColor=[UIColor colorWithRed:228/255.0 green:31/255.0 blue:54/255.0 alpha:1];
         _fourField.backgroundColor=[UIColor colorWithRed:228/255.0 green:31/255.0 blue:54/255.0 alpha:1];
@@ -209,9 +240,25 @@
     
     UITextField *textField=(UITextField *)sender;
     
+    if (savedKey) {
+        
+        [_answerString appendString:textField.text];
+        
+    }else{
+        
+        if (isSecondRegister) {
+            
+            [_secondTimePasscodeString appendString:textField.text];
+            
+            
+        }else{
+            
+            [_firstTimePasscodeString appendString:textField.text];
+        }
+        
+    }
     
     
-    [_answerString appendString:textField.text];
     
     if ([textField tag]==1) {
         
@@ -238,13 +285,100 @@
         
         [_fourField resignFirstResponder];
         
-        [self checkForAnswer];
+        
+        
+        if (!savedKey) {
+            if (!isSecondRegister) {
+                
+                [self showPasswordEnterAgain];
+   
+            }else{
+                
+                //save the password and move on to next view
+                
+                if ([_secondTimePasscodeString isEqualToString:_firstTimePasscodeString]) {
+                    
+                    _savedKeyString=_secondTimePasscodeString;
+                    [self saveKeyAndMoveOn];
+                    
+                    
+                }else{
+                    
+                    _oneField.backgroundColor=[UIColor colorWithRed:228/255.0 green:31/255.0 blue:54/255.0 alpha:1]; //red color
+                    _twoField.backgroundColor=[UIColor colorWithRed:228/255.0 green:31/255.0 blue:54/255.0 alpha:1];
+                    _threeField.backgroundColor=[UIColor colorWithRed:228/255.0 green:31/255.0 blue:54/255.0 alpha:1];
+                    _fourField.backgroundColor=[UIColor colorWithRed:228/255.0 green:31/255.0 blue:54/255.0 alpha:1];
+                    
+                    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+                    [_stackView addStackViewAnimation];
+                    
+                    //second time passcode is wrong, strt from first.
+                    isSecondRegister=NO;
+                    answered=NO;
+                    savedKey=NO;
+                    
+                    [_savedKeyString setString:@""];
+                    [_firstTimePasscodeString setString:@""];
+                    [_secondTimePasscodeString setString:@""];
+                    _statusLabel.text=@"Password didnt matched.Try with again!!!";
+                    _oneField.text=@"";
+                    _twoField.text=@"";
+                    _threeField.text=@"";
+                    _fourField.text=@"";
+                    [_oneField becomeFirstResponder];
+                }
+                
+                
+            }
+        }else{
+            [self checkForAnswer];
+        }
         
         
     }
     
     
 }
+
+-(void)saveKeyAndMoveOn{
+    
+    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"RegisteredKey"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+    
+    [[NSUserDefaults standardUserDefaults]setObject:_savedKeyString forKey:@"savedPasscode"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+    
+    
+    
+    TabBarController *tabVC=[self.storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
+    
+    [self presentViewController:tabVC animated:YES completion:nil];
+    
+    
+}
+
+
+
+-(void)showPasswordEnterAgain{
+    
+    _oneField.text=@"";
+    _twoField.text=@"";
+    _threeField.text=@"";
+    _fourField.text=@"";
+    
+    [_savedKeyString setString:@""];
+    
+    _statusLabel.text=@"Enter same passcode again";
+    
+    [_fourField resignFirstResponder];
+    [_oneField becomeFirstResponder];
+    
+    isSecondRegister=YES;
+
+    
+   
+}
+
 
 -(void)showAlertWithTitle:(NSString *)title message:(NSString *)message{
     
@@ -279,12 +413,11 @@
                                     
                                     dispatch_async(dispatch_get_main_queue(), ^{
                                         
-                                        [self showAlertWithTitle:@"Log in Success" message:@":D"];
                                         
-                                        [_stackView addStackViewAnimationWithCompletion:^(BOOL finished) {
-                                            
-                                            NSLog(@"animation completed");
-                                        }];
+                                        TabBarController *tabVC=[self.storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
+                                        
+                                        [self presentViewController:tabVC animated:YES completion:nil];
+                                        
                                         
                                     });
                                 } else {
