@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4412A87D6089B9D779A84D58 /* libPods-myBuddy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D66073C8996CF29B52B1C3E /* libPods-myBuddy.a */; };
+		5DC44BBF1C1281940005FCB9 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC44BB41C1281930005FCB9 /* FMDatabase.m */; };
+		5DC44BC01C1281940005FCB9 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC44BB61C1281930005FCB9 /* FMDatabaseAdditions.m */; };
+		5DC44BC11C1281940005FCB9 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC44BB81C1281930005FCB9 /* FMDatabasePool.m */; };
+		5DC44BC21C1281940005FCB9 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC44BBA1C1281930005FCB9 /* FMDatabaseQueue.m */; };
+		5DC44BC31C1281940005FCB9 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC44BBD1C1281930005FCB9 /* FMResultSet.m */; };
 		5DE967B21C0EC6C600DC62F9 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE967B11C0EC6C600DC62F9 /* ListViewController.m */; };
 		5DE967B51C0EC6EB00DC62F9 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE967B41C0EC6EB00DC62F9 /* CameraViewController.m */; };
 		5DE967B71C0ECAA900DC62F9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE967B61C0ECAA900DC62F9 /* libsqlite3.0.tbd */; };
@@ -27,6 +32,18 @@
 
 /* Begin PBXFileReference section */
 		1D66073C8996CF29B52B1C3E /* libPods-myBuddy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myBuddy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DC44BB31C1281930005FCB9 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		5DC44BB41C1281930005FCB9 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		5DC44BB51C1281930005FCB9 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		5DC44BB61C1281930005FCB9 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		5DC44BB71C1281930005FCB9 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		5DC44BB81C1281930005FCB9 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		5DC44BB91C1281930005FCB9 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		5DC44BBA1C1281930005FCB9 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		5DC44BBB1C1281930005FCB9 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		5DC44BBC1C1281930005FCB9 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		5DC44BBD1C1281930005FCB9 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		5DC44BBE1C1281940005FCB9 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		5DE967B01C0EC6C600DC62F9 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListViewController.h; path = ../ListViewController.h; sourceTree = "<group>"; };
 		5DE967B11C0EC6C600DC62F9 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListViewController.m; path = ../ListViewController.m; sourceTree = "<group>"; };
 		5DE967B31C0EC6EB00DC62F9 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = ../CameraViewController.h; sourceTree = "<group>"; };
@@ -70,6 +87,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5DC44BB21C1281760005FCB9 /* FMdb */ = {
+			isa = PBXGroup;
+			children = (
+				5DC44BB31C1281930005FCB9 /* FMDatabase.h */,
+				5DC44BB41C1281930005FCB9 /* FMDatabase.m */,
+				5DC44BB51C1281930005FCB9 /* FMDatabaseAdditions.h */,
+				5DC44BB61C1281930005FCB9 /* FMDatabaseAdditions.m */,
+				5DC44BB71C1281930005FCB9 /* FMDatabasePool.h */,
+				5DC44BB81C1281930005FCB9 /* FMDatabasePool.m */,
+				5DC44BB91C1281930005FCB9 /* FMDatabaseQueue.h */,
+				5DC44BBA1C1281930005FCB9 /* FMDatabaseQueue.m */,
+				5DC44BBB1C1281930005FCB9 /* FMDB.h */,
+				5DC44BBC1C1281930005FCB9 /* FMResultSet.h */,
+				5DC44BBD1C1281930005FCB9 /* FMResultSet.m */,
+				5DC44BBE1C1281940005FCB9 /* FMDatabase.h */,
+			);
+			name = FMdb;
+			sourceTree = "<group>";
+		};
 		AC33D071CA334890E0057192 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +118,7 @@
 		B800302B1C0F54CC004B0565 /* AnimationViews */ = {
 			isa = PBXGroup;
 			children = (
+				B80030291C0F4DB7004B0565 /* Screenshot.png */,
 				B80030231C0F47D9004B0565 /* StackView.h */,
 				B80030241C0F47D9004B0565 /* StackView.m */,
 			);
@@ -91,6 +128,7 @@
 		B80D9D071C0C8CCD004A1FF6 = {
 			isa = PBXGroup;
 			children = (
+				5DC44BB21C1281760005FCB9 /* FMdb */,
 				B80030211C0F3E50004B0565 /* LocalAuthentication.framework */,
 				5DE967B61C0ECAA900DC62F9 /* libsqlite3.0.tbd */,
 				B80D9D121C0C8CCE004A1FF6 /* myBuddy */,
@@ -121,12 +159,11 @@
 				B8192C9A1C0E319D006E8E7E /* LoginTextField.m */,
 				5DE967B31C0EC6EB00DC62F9 /* CameraViewController.h */,
 				5DE967B41C0EC6EB00DC62F9 /* CameraViewController.m */,
-				B800302C1C0F8FFE004B0565 /* TabBarController.h */,
-				B800302D1C0F8FFE004B0565 /* TabBarController.m */,
-				B80030291C0F4DB7004B0565 /* Screenshot.png */,
-				B800302B1C0F54CC004B0565 /* AnimationViews */,
 				5DE967B01C0EC6C600DC62F9 /* ListViewController.h */,
 				5DE967B11C0EC6C600DC62F9 /* ListViewController.m */,
+				B800302C1C0F8FFE004B0565 /* TabBarController.h */,
+				B800302D1C0F8FFE004B0565 /* TabBarController.m */,
+				B800302B1C0F54CC004B0565 /* AnimationViews */,
 				B80D9D1C1C0C8CCE004A1FF6 /* Main.storyboard */,
 				B800301B1C0F2B5A004B0565 /* Launch Screen.storyboard */,
 				B80D9D1F1C0C8CCE004A1FF6 /* Assets.xcassets */,
@@ -275,11 +312,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8192C981C0E26DD006E8E7E /* LoginViewController.m in Sources */,
+				5DC44BC11C1281940005FCB9 /* FMDatabasePool.m in Sources */,
+				5DC44BC31C1281940005FCB9 /* FMResultSet.m in Sources */,
 				B80D9D1B1C0C8CCE004A1FF6 /* ViewController.m in Sources */,
 				5DE967B21C0EC6C600DC62F9 /* ListViewController.m in Sources */,
+				5DC44BC21C1281940005FCB9 /* FMDatabaseQueue.m in Sources */,
+				5DC44BBF1C1281940005FCB9 /* FMDatabase.m in Sources */,
 				B800302E1C0F8FFE004B0565 /* TabBarController.m in Sources */,
 				B80D9D181C0C8CCE004A1FF6 /* AppDelegate.m in Sources */,
 				B80D9D151C0C8CCE004A1FF6 /* main.m in Sources */,
+				5DC44BC01C1281940005FCB9 /* FMDatabaseAdditions.m in Sources */,
 				5DE967B51C0EC6EB00DC62F9 /* CameraViewController.m in Sources */,
 				B8192C9B1C0E319D006E8E7E /* LoginTextField.m in Sources */,
 				B80030251C0F47D9004B0565 /* StackView.m in Sources */,

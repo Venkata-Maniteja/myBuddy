@@ -9,6 +9,8 @@
 
 #import "ListViewController.h"
 #import <sqlite3.h>
+#import "FMDatabase.h"
+
 
 @interface ListViewController ()
 
@@ -66,57 +68,27 @@
   
   -(void)getDatafromDatabase{
   
+      // Used Fmdb to get data
+      
       list = [[NSMutableArray alloc] init];
-      NSString *docsDir;
-      NSArray *dirPaths;
-  
-      // Get the documents directory
-      dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-      docsDir = dirPaths[0];
-  
-      // Build the path to the database file
-  
-      databasePath = [[NSString alloc]
-                      initWithString: [docsDir stringByAppendingPathComponent:
-                                       @"Buddy.db"]];
-  
-      const char *dbpath = [databasePath UTF8String];
-      sqlite3_stmt    *statement;
-  
-      if (sqlite3_open(dbpath, &myDatabase) == SQLITE_OK)
-      {
-  
-          [list removeAllObjects];
-  
-          NSString *querySQL = @"SELECT IMAGE FROM Data ";
-  
-          const char *query_stmt = [querySQL UTF8String];
-  
-          if (sqlite3_prepare_v2(myDatabase, query_stmt, -1, &statement, NULL) == SQLITE_OK)
-          {
-  
-              while (sqlite3_step(statement) == SQLITE_ROW)
-              {
-  
-                  int  len = sqlite3_column_bytes(statement, 0);
-                  NSData *imgData = [[NSData alloc] initWithBytes: sqlite3_column_blob(statement, 0) length: len];
-  
-                  if(imgData == nil){
-                      NSLog(@"No image found.");
-                  }
-                  else{
-                                         [list addObject:imgData];
-                  }
-  
-  
-              }
-              sqlite3_finalize(statement);
-  
-          }
-  
-          NSLog(@"list count is %lu",(unsigned long)list.count);
-                 sqlite3_close(myDatabase);
+      NSArray  *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+      NSString *docsPath = [paths objectAtIndex:0];
+      NSString *dbPath = [docsPath stringByAppendingPathComponent:@"Buddy.db"];
+      
+      FMDatabase *database = [FMDatabase databaseWithPath:dbPath];
+      [database open];
+      NSString *sqlSelectQuery = @"SELECT IMAGE FROM Data ";
+      
+      // Query result
+      FMResultSet *resultsWithNameLocation = [database executeQuery:sqlSelectQuery];
+      while([resultsWithNameLocation next]) {
+          
+          NSData *imgData = [resultsWithNameLocation dataForColumn:@"IMAGE"];
+          // UIImage *img = [UIImage imageWithData:imgData];
+          
+          [list addObject:imgData];;
       }
+      [database close];
   }
   
   

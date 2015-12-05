@@ -12,6 +12,8 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "ListViewController.h"
 #import <sqlite3.h>
+#import "FMDatabase.h"
+
 
 
 @interface CameraViewController ()
@@ -143,6 +145,9 @@
 
 -(void)prepareDatabase{
     
+    // Used sqlite just to create DB and Table  FMDB not allow to create writable database file Remaining all used by FMDB
+    
+    
     // Get the documents directory
     NSArray *dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *docsDir = dirPaths[0];
@@ -151,9 +156,6 @@
     
     
     databasePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent:@"Buddy.db"]];
-    
-    //  NSError *error = nil;
-    // [[NSFileManager defaultManager] removeItemAtPath:databasePath error:&error];
     
     
     NSLog(@"DB Path: %@", databasePath);
@@ -182,9 +184,6 @@
                 [alert show];
             }
             
-            
-            
-            
             sqlite3_close(myDatabase);
         } else {
             statusOfAddingToDB = @"Failed to open/create database";
@@ -200,52 +199,23 @@
     
     
     
+    // Used FMDB TO insert
+    
+    
     NSData* imageData_tempsave = [[NSUserDefaults standardUserDefaults] objectForKey:@"imagesave"];
     UIImage* chosenImage = [UIImage imageWithData:imageData_tempsave];
-    
-    //  self.imageView.image = [UIImage imageNamed:@"HAppy Meal.jpg"];
-    
     NSData *imageData=UIImagePNGRepresentation(chosenImage);
     
+    NSArray  *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docsPath = [paths objectAtIndex:0];
+    NSString *dbPath = [docsPath stringByAppendingPathComponent:@"Buddy.db"];
     
-    NSString *imageURLValue = [[NSUserDefaults standardUserDefaults]stringForKey:@"imageurl"];
-    NSLog(@"image url is %@",imageURLValue);
+    FMDatabase *database = [FMDatabase databaseWithPath:dbPath];
+    [database open];
+    NSString *insertQuery = [NSString stringWithFormat:@"INSERT INTO Data VALUES (?)",imageData];
     
-    
-    sqlite3_stmt    *statement;
-    const char *dbpath = [databasePath UTF8String];
-    
-    if (sqlite3_open(dbpath, &myDatabase) == SQLITE_OK) {
-        
-        insertSQL = [NSString stringWithFormat:@"INSERT INTO Data ( IMAGE ) VALUES (?)"];
-        
-        const char *insert_stmt = [insertSQL UTF8String];
-        
-        
-        if( sqlite3_prepare_v2(myDatabase, insert_stmt, -1, &statement, NULL) == SQLITE_OK )
-        {
-            
-            sqlite3_bind_blob(statement, 1, [imageData bytes], [imageData length], SQLITE_TRANSIENT);
-            
-            sqlite3_step(statement);
-            
-            UIAlertView *saveAlert=[[UIAlertView alloc]initWithTitle:@"Image Saved" message:@"Success" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-            //[saveAlert show];
-            // saveAlert.tag=1;
-            // [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"example"];
-        }
-        
-        else NSLog( @"SaveBody: Failed from sqlite3_prepare_v2. Error is:  %s", sqlite3_errmsg(myDatabase) );
-        
-        NSLog( @"Insert into row id %lld",(sqlite3_last_insert_rowid(myDatabase)));
-        
-        // Finalize and close database.
-        sqlite3_finalize(statement);
-        sqlite3_close(myDatabase);
-    }
-    
-    
-    
+    [database executeUpdate:insertQuery];
+    [database close];
 }
 
 
