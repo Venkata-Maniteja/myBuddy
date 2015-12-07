@@ -6,7 +6,7 @@
 target 'myBuddy' do
 
 
-pod 'MagicalRecord'
+pod 'FMDB'
 
 
 end

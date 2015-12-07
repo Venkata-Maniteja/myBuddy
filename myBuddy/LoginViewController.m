@@ -11,6 +11,8 @@
 #import "StackView.h"
 #import <AudioToolbox/AudioToolbox.h> 
 #import "TabBarController.h"
+#import "BuddyManager.h"
+#import <FMDatabase.h>
 
 @interface LoginViewController ()<UITextFieldDelegate>{
     
@@ -32,6 +34,13 @@
 
 @property (nonatomic,weak) IBOutlet UILabel *statusLabel;
 
+@property (nonatomic,strong) NSString *databasePath;
+@property (nonatomic,strong) BuddyManager *manager;
+@property (nonatomic,strong) FMDatabase *database;
+@property (nonatomic,strong) FMResultSet *results;
+
+
+
 @end
 
 @implementation LoginViewController
@@ -41,12 +50,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    _manager=[BuddyManager sharedManager];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docsPath = [paths objectAtIndex:0];
+    NSString *path = [docsPath stringByAppendingPathComponent:@"buddyDatabase.sqlite"];
+    _database = [FMDatabase databaseWithPath:path];
+    
+    
     _answerString=[[NSMutableString alloc]init];
     _savedKeyString=[[NSMutableString alloc]init];
     _firstTimePasscodeString=[[NSMutableString alloc]init];
     _secondTimePasscodeString=[[NSMutableString alloc]init];
     
-    savedKey=[[NSUserDefaults standardUserDefaults]boolForKey:@"RegisteredKey"];
+    savedKey=[self getIsPasswordSaved];
     
     [self addTextFieldObservers];
     
@@ -60,6 +77,22 @@
         
     }
    
+}
+
+-(BOOL)getIsPasswordSaved{
+    
+    BOOL saved=NO;
+        [_database open];
+        _results = [_database executeQuery:@"select * from user"];
+        while([_results next]) {
+            saved=[_results boolForColumn:@"passCreated"];
+            _manager.password=[_results stringForColumn:@"password"];
+            [_manager setPasswordSaved:saved];
+        }
+        [_database close];
+    
+    return saved;
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -98,7 +131,7 @@
     _threeField.text=@"";
     _fourField.text=@"";
     
-    NSString *answer=[[NSUserDefaults standardUserDefaults]objectForKey:@"savedPasscode"];
+    NSString *answer=_manager.password;//[[NSUserDefaults standardUserDefaults]objectForKey:@"savedPasscode"];
     
     if ([_answerString isEqualToString:answer]) {
         
@@ -342,11 +375,24 @@
 
 -(void)saveKeyAndMoveOn{
     
-    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"RegisteredKey"];
-    [[NSUserDefaults standardUserDefaults]synchronize];
+    //save key on database
+    [_manager setPassword:_savedKeyString];
+    [_manager setPasswordSaved:YES];
     
-    [[NSUserDefaults standardUserDefaults]setObject:_savedKeyString forKey:@"savedPasscode"];
-    [[NSUserDefaults standardUserDefaults]synchronize];
+    
+    
+    [_database open];
+    [_database executeUpdate:@"insert into user(name, password ,passCreated ,databasePath) values(?,?,?,?)",
+     [[UIDevice currentDevice] name],_savedKeyString,[NSNumber numberWithBool:YES],_databasePath,nil];
+    [_database close];
+    
+    
+    
+//    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"RegisteredKey"];
+//    [[NSUserDefaults standardUserDefaults]synchronize];
+//    
+//    [[NSUserDefaults standardUserDefaults]setObject:_savedKeyString forKey:@"savedPasscode"];
+//    [[NSUserDefaults standardUserDefaults]synchronize];
     
     
     
@@ -455,6 +501,8 @@
 
     
 }
+
+
 
 
 /*

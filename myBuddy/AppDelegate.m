@@ -7,8 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "BuddyManager.h"
+#import <FMDatabase.h>
 
 @interface AppDelegate ()
+
+@property (nonatomic,strong) BuddyManager *manager;
+@property (nonatomic,strong) FMDatabase *database;
+@property (nonatomic,strong) NSString *dataBasePath;
 
 @end
 
@@ -17,7 +23,42 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    _manager=[BuddyManager sharedManager];
+    
+    if (![[NSUserDefaults standardUserDefaults]boolForKey:@"BaseCreated"]) {
+        
+        [self createDatabase];
+        
+    }
+    NSLog(@"dataabase path is %@",_manager.dataBasePath);
+    
+    
     return YES;
+}
+
+-(void)createDatabase{
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docsPath = [paths objectAtIndex:0];
+    _dataBasePath = [docsPath stringByAppendingPathComponent:@"buddyDatabase.sqlite"];
+    
+    [[NSUserDefaults standardUserDefaults]setObject:_dataBasePath forKey:@"BasePath"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+    
+    _database = [FMDatabase databaseWithPath:_dataBasePath];
+    
+    [_manager setDataBaseCreated:YES];
+    [_manager setDataBasePath:_dataBasePath];
+    
+    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"BaseCreated"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+    
+    [_database open];
+    [_database executeUpdate:@"create table user(name text primary key, password text ,passCreated BOOLEAN,databasePath text)"];
+    [_database executeUpdate:@"create table fileBase(fileName text primary key, filePassword text ,fileURL text, filePasswordHint text,fileImage BLOB,fileEnteredTime DATETIME)"];
+    [_database close];
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

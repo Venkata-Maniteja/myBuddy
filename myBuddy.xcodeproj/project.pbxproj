@@ -23,6 +23,7 @@
 		B80D9D201C0C8CCE004A1FF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B80D9D1F1C0C8CCE004A1FF6 /* Assets.xcassets */; };
 		B8192C981C0E26DD006E8E7E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8192C971C0E26DD006E8E7E /* LoginViewController.m */; };
 		B8192C9B1C0E319D006E8E7E /* LoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B8192C9A1C0E319D006E8E7E /* LoginTextField.m */; };
+		B83B3A481C15D4CA00C8F307 /* BuddyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B83B3A471C15D4CA00C8F307 /* BuddyManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,8 @@
 		B8192C971C0E26DD006E8E7E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B8192C991C0E319D006E8E7E /* LoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTextField.h; sourceTree = "<group>"; };
 		B8192C9A1C0E319D006E8E7E /* LoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTextField.m; sourceTree = "<group>"; };
+		B83B3A461C15D4CA00C8F307 /* BuddyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuddyManager.h; sourceTree = "<group>"; };
+		B83B3A471C15D4CA00C8F307 /* BuddyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuddyManager.m; sourceTree = "<group>"; };
 		D14065A071F8D4C71700CC4B /* Pods-myBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-myBuddy/Pods-myBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +126,8 @@
 				5DE967B41C0EC6EB00DC62F9 /* CameraViewController.m */,
 				B800302C1C0F8FFE004B0565 /* TabBarController.h */,
 				B800302D1C0F8FFE004B0565 /* TabBarController.m */,
+				B83B3A461C15D4CA00C8F307 /* BuddyManager.h */,
+				B83B3A471C15D4CA00C8F307 /* BuddyManager.m */,
 				B80030291C0F4DB7004B0565 /* Screenshot.png */,
 				B800302B1C0F54CC004B0565 /* AnimationViews */,
 				5DE967B01C0EC6C600DC62F9 /* ListViewController.h */,
@@ -278,6 +283,7 @@
 				B80D9D1B1C0C8CCE004A1FF6 /* ViewController.m in Sources */,
 				5DE967B21C0EC6C600DC62F9 /* ListViewController.m in Sources */,
 				B800302E1C0F8FFE004B0565 /* TabBarController.m in Sources */,
+				B83B3A481C15D4CA00C8F307 /* BuddyManager.m in Sources */,
 				B80D9D181C0C8CCE004A1FF6 /* AppDelegate.m in Sources */,
 				B80D9D151C0C8CCE004A1FF6 /* main.m in Sources */,
 				5DE967B51C0EC6EB00DC62F9 /* CameraViewController.m in Sources */,

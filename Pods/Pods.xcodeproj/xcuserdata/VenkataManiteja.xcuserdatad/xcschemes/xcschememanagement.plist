@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>MagicalRecord.xcscheme</key>
+		<key>FMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3C96BD1E5702C53B40B43510E0A0882C</key>
+		<key>9F12FB4A63E20F601CFB2E64A65B57C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D54AB3ECEB9A8FBA15D4F73CBE326692</key>
+		<key>F685AB6203CF7F80DF7C12A96902694C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
