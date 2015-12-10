@@ -56,7 +56,7 @@
     
     [_database open];
     [_database executeUpdate:@"create table user(name text primary key, password text ,passCreated BOOLEAN,databasePath text)"];
-    [_database executeUpdate:@"create table fileBase(fileName text primary key, filePassword text ,fileURL text, filePasswordHint text,fileImage BLOB,fileEnteredTime DATETIME)"];
+    [_database executeUpdate:@"create table fileBase(fileName text primary key, filePassword text ,fileURL text, filePasswordHint text,fileImage BLOB,fileColor text,fileEnteredTime DATETIME)"];
     [_database close];
     
 }

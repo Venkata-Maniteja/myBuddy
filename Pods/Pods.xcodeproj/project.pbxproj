@@ -7,67 +7,120 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EF8E9AA652DBE2745A7D5C8CD2E3BDE /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 475630B9EDA128A2FEA091C9D63AED3F /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0F8A8E0D6FAEBF758E0B4D620335F094 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 5696C1F124500924CE065F8CEA33F978 /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		282081E035E7A843068E8BCC2E07C217 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B42D69CD99479A04B6A708D9A1817E54 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		313531CEDA0294311D87B4F4C3F073F4 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = CC2AA98E70EF15C6F8A88750F2680320 /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		329C29343DC96897AEB52EFF2C4AB39F /* Pods-myBuddy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 203F92623B1B9830ADAB6D45EB92BCFE /* Pods-myBuddy-dummy.m */; };
-		3D0F69C4CA35EB6A1F686BA88B19B4F6 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6258E712F1089BFF63A6B28B87669F03 /* FMDB-dummy.m */; };
+		0A8445C4C759BB51A3320DB395AB4295 /* HRColorCursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C2768A5546DD8A0D0AB8E472787049 /* HRColorCursor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D402E944456A46BC35A466C19FC341A /* HRHSVColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D19E6770D9CA734711891D4AFCB266D4 /* HRHSVColorUtil.m */; };
+		0EF8E9AA652DBE2745A7D5C8CD2E3BDE /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6B871AC437233B8733AEE3AACD0466 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0F8A8E0D6FAEBF758E0B4D620335F094 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EE77D98DE6EA89B994F7290A12CA9AF /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16D429EAA6C41B28F1D675E5897F6DBE /* HRBrightnessSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AABD86182B97A26315D5D038D99007A /* HRBrightnessSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		176B8E64CB0030FEBBEFBD0BCA0D9055 /* HRColorInfoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 162E3D9BA8616D8C7CAE76C220334C82 /* HRColorInfoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1820BF0714109AC59CF7815E4C0FE641 /* UIImage+CoreGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F5338DF1FA12FC7DA1105E1EF01172 /* UIImage+CoreGraphics.m */; };
+		1DF3F31DA9A188A74888671DA36E63F4 /* HRBrightnessCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8700E9721A76DE175F8A2A9FFA6D3DD3 /* HRBrightnessCursor.m */; };
+		265CA57A5D45532ED860BC03BDA83356 /* Pods-myBuddy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 203F92623B1B9830ADAB6D45EB92BCFE /* Pods-myBuddy-dummy.m */; };
+		282081E035E7A843068E8BCC2E07C217 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7394506E280C290A914419572F5E18 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		313531CEDA0294311D87B4F4C3F073F4 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = F684487F0EEA4D6738631F6215517840 /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		397AE1D76B53C77818618FB5EC4706BB /* HRColorInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9448CE890ABDDADBBCBD821B434275 /* HRColorInfoView.m */; };
+		39A837690E549A15ED2779A75451F7F0 /* HRBrightnessSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8DDE8D11B441C7878F4A0F94E8B6D8 /* HRBrightnessSlider.m */; };
+		3AD9DEE0D27BF3B662348D3F8ECEE5FC /* HRColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 884641B68C002CCF766D881F6162B42C /* HRColorPickerView.m */; };
+		3D0F69C4CA35EB6A1F686BA88B19B4F6 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CA2C8BA6C6CFEE75273E099CBD8586 /* FMDB-dummy.m */; };
+		3DE8BFF25D562B007914942C350A3CBB /* HRColorPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B2335EF4AF67ABF9BD09E30A080FF7A /* HRColorPickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C518DD88E60DC8F41E6EDE031F26174 /* HRColorCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1583C63392C991CB6890427CA5D6194C /* HRColorCursor.m */; };
 		587B76A3E381AF7C3EFFDF6754D39288 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		A350C5704A1F233DAD830E081E00F8C1 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F71FF0833DB53F536450483211F7CD /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		B418C9BDCF8C6BAC2E3942F157BB6D4C /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B007C91029361327653F7DCE2E7599C0 /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA027706DD6805766F1F4EC548E72440 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B2DE6BA720930EA5A25DEAD9804D47 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D0C5FF5485EAA2CDA03E9796B407697A /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = AD57EB2E148CBB0484960AFCFB4C7588 /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0D5FFE53407F16C9CD3D0ECF43ACE93 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 990191AC5970F54BD454007D4FC0B2C3 /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DEFA3504695E9DFDE1177DAB22884470 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B00FE45DA7886136FAD44633735B4DE3 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F977B243321331B58666E9284634101A /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = FA296DC0E25687826F8CB594F359BD14 /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FA524E381107BEE021E36E8CFDDB8866 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		64916E7543407BB7649DC9C94E189500 /* UIImage+CoreGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 99DFFE42C5094F58A45B662FA85022B7 /* UIImage+CoreGraphics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7867DAC42C95B66CEA4FDDE9B04E77A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		A350C5704A1F233DAD830E081E00F8C1 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F95B5D252CD2122FC7F1E23A16314E96 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B418C9BDCF8C6BAC2E3942F157BB6D4C /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B2AC678A529E30753065D0EDC03424D8 /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA027706DD6805766F1F4EC548E72440 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 052727EA3421C18215D4B908DF8B2581 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CA3D1A1375D271A9ADAE59EBB5BF2698 /* HRColorMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA0F592D4E675B8D1EE6F90380041B1 /* HRColorMapView.m */; };
+		D0C5FF5485EAA2CDA03E9796B407697A /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E745C3AC3EDB4BB6A680709627D1E93 /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0D5FFE53407F16C9CD3D0ECF43ACE93 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = B663F6DAF06D2A221396A1EC333888CF /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D57F683341674C7A7D48A0C99C163660 /* HRHSVColorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 51440F05E72BFC63F8D72947FF2FD230 /* HRHSVColorUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5864DAFF8ECDBFBE5AEEE6A0CFF883B /* HRColorMapView.h in Headers */ = {isa = PBXBuildFile; fileRef = 24A19126301B535159742A081CAFA430 /* HRColorMapView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEFA3504695E9DFDE1177DAB22884470 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 61676BC9C938EE598E13A17C945F6740 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E501878013FD37E6DF0FF78B2C9A507B /* Color-Picker-for-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F950375A67E915B6230FAA05223D6 /* Color-Picker-for-iOS-dummy.m */; };
+		F3E2CC3E109B55B339A42790AD234EB1 /* HRBrightnessCursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 365A30CC78290DDA5FB30537EC8C3AF6 /* HRBrightnessCursor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5B05D710C49550971B7579A3F0D0E2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		F977B243321331B58666E9284634101A /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 91B7AA390325471A6FCB2F5ACC13AFEC /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		263F5C75B09533FD6171625CE2858D9D /* PBXContainerItemProxy */ = {
+		AA4DD73B7C4BC4580FA419C1B8B8893A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9F12FB4A63E20F601CFB2E64A65B57C1;
 			remoteInfo = FMDB;
 		};
+		C337B0AE475AC202CF5A03E921C61B8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A78C3A05A5998BFD2C6B372328EAE74;
+			remoteInfo = "Color-Picker-for-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		050AB6225F84DCAD124E49430A119D52 /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		052727EA3421C18215D4B908DF8B2581 /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
 		0B470B4EBB9786A2EA97FE83235EF772 /* Pods-myBuddy-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-myBuddy-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1583C63392C991CB6890427CA5D6194C /* HRColorCursor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRColorCursor.m; path = ColorPicker/HRColorCursor.m; sourceTree = "<group>"; };
+		162E3D9BA8616D8C7CAE76C220334C82 /* HRColorInfoView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorInfoView.h; path = ColorPicker/HRColorInfoView.h; sourceTree = "<group>"; };
 		203F92623B1B9830ADAB6D45EB92BCFE /* Pods-myBuddy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-myBuddy-dummy.m"; sourceTree = "<group>"; };
+		24A19126301B535159742A081CAFA430 /* HRColorMapView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorMapView.h; path = ColorPicker/HRColorMapView.h; sourceTree = "<group>"; };
+		2A1F950375A67E915B6230FAA05223D6 /* Color-Picker-for-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Color-Picker-for-iOS-dummy.m"; sourceTree = "<group>"; };
 		32CF4BA4206AA41D804E8A31A3CD3086 /* Pods-myBuddy-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-myBuddy-acknowledgements.plist"; sourceTree = "<group>"; };
+		365A30CC78290DDA5FB30537EC8C3AF6 /* HRBrightnessCursor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRBrightnessCursor.h; path = ColorPicker/HRBrightnessCursor.h; sourceTree = "<group>"; };
+		3A54E09437BDCFBA7DBDDDD6001EC634 /* libPods-myBuddy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myBuddy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		475630B9EDA128A2FEA091C9D63AED3F /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
-		5696C1F124500924CE065F8CEA33F978 /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
-		6258E712F1089BFF63A6B28B87669F03 /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
-		87C73E45B7F731995184803D53AAFB9B /* libPods-myBuddy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myBuddy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CA0F592D4E675B8D1EE6F90380041B1 /* HRColorMapView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRColorMapView.m; path = ColorPicker/HRColorMapView.m; sourceTree = "<group>"; };
+		4EE77D98DE6EA89B994F7290A12CA9AF /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		51440F05E72BFC63F8D72947FF2FD230 /* HRHSVColorUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRHSVColorUtil.h; path = ColorPicker/HRHSVColorUtil.h; sourceTree = "<group>"; };
+		61676BC9C938EE598E13A17C945F6740 /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		63C2768A5546DD8A0D0AB8E472787049 /* HRColorCursor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorCursor.h; path = ColorPicker/HRColorCursor.h; sourceTree = "<group>"; };
+		6B6B871AC437233B8733AEE3AACD0466 /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		6E7394506E280C290A914419572F5E18 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		6E745C3AC3EDB4BB6A680709627D1E93 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		79CA2C8BA6C6CFEE75273E099CBD8586 /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
+		7B2335EF4AF67ABF9BD09E30A080FF7A /* HRColorPickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorPickerView.h; path = ColorPicker/HRColorPickerView.h; sourceTree = "<group>"; };
+		8700E9721A76DE175F8A2A9FFA6D3DD3 /* HRBrightnessCursor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRBrightnessCursor.m; path = ColorPicker/HRBrightnessCursor.m; sourceTree = "<group>"; };
+		884641B68C002CCF766D881F6162B42C /* HRColorPickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRColorPickerView.m; path = ColorPicker/HRColorPickerView.m; sourceTree = "<group>"; };
 		8A1FE58B9F95FF3C5BD743BE6CC8BAFD /* Pods-myBuddy-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-myBuddy-resources.sh"; sourceTree = "<group>"; };
-		990191AC5970F54BD454007D4FC0B2C3 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
+		8AABD86182B97A26315D5D038D99007A /* HRBrightnessSlider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRBrightnessSlider.h; path = ColorPicker/HRBrightnessSlider.h; sourceTree = "<group>"; };
+		91B7AA390325471A6FCB2F5ACC13AFEC /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		99DFFE42C5094F58A45B662FA85022B7 /* UIImage+CoreGraphics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+CoreGraphics.h"; path = "ColorPicker/UIImage+CoreGraphics.h"; sourceTree = "<group>"; };
+		9E204D37EE6BA61DB10F9DBFEFB9C7F5 /* Color-Picker-for-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Color-Picker-for-iOS.xcconfig"; sourceTree = "<group>"; };
+		9F843D3FF6F6C0F9575B05E256EFA618 /* libColor-Picker-for-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libColor-Picker-for-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2943F3D831BFF873B9FB4077C7DFB2D /* FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-prefix.pch"; sourceTree = "<group>"; };
 		A4E9F7C82DE94E68F9B08E15F7303CA8 /* Pods-myBuddy-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-myBuddy-frameworks.sh"; sourceTree = "<group>"; };
 		A8037C1DF40BF1664F979C6A3EBB7DC8 /* Pods-myBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-myBuddy.release.xcconfig"; sourceTree = "<group>"; };
-		AD57EB2E148CBB0484960AFCFB4C7588 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
-		B007C91029361327653F7DCE2E7599C0 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		B00FE45DA7886136FAD44633735B4DE3 /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
-		B3B2DE6BA720930EA5A25DEAD9804D47 /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
-		B42D69CD99479A04B6A708D9A1817E54 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		B2AC678A529E30753065D0EDC03424D8 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		B663F6DAF06D2A221396A1EC333888CF /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		CC2AA98E70EF15C6F8A88750F2680320 /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
-		D874D9C80FA1F53051632DE704321234 /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
-		E2BEF0E1A0D20A71D84A9D106647F023 /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA7F4524D2AF509C459F6B158E80820C /* FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-prefix.pch"; sourceTree = "<group>"; };
-		F0F71FF0833DB53F536450483211F7CD /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		D19E6770D9CA734711891D4AFCB266D4 /* HRHSVColorUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRHSVColorUtil.m; path = ColorPicker/HRHSVColorUtil.m; sourceTree = "<group>"; };
+		DF9448CE890ABDDADBBCBD821B434275 /* HRColorInfoView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRColorInfoView.m; path = ColorPicker/HRColorInfoView.m; sourceTree = "<group>"; };
+		E109034CB0EF5FC388279237E33993D4 /* Color-Picker-for-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Color-Picker-for-iOS-prefix.pch"; sourceTree = "<group>"; };
+		E5F5338DF1FA12FC7DA1105E1EF01172 /* UIImage+CoreGraphics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CoreGraphics.m"; path = "ColorPicker/UIImage+CoreGraphics.m"; sourceTree = "<group>"; };
+		EB8DDE8D11B441C7878F4A0F94E8B6D8 /* HRBrightnessSlider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRBrightnessSlider.m; path = ColorPicker/HRBrightnessSlider.m; sourceTree = "<group>"; };
+		F684487F0EEA4D6738631F6215517840 /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
 		F8FBCB571496AE51C24DEF565F700A87 /* Pods-myBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-myBuddy.debug.xcconfig"; sourceTree = "<group>"; };
-		FA296DC0E25687826F8CB594F359BD14 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		F95B5D252CD2122FC7F1E23A16314E96 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		FC9C340448BD06B4E462D8B5B1A884AB /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		46A35399215BA872784144EFDFA5C0E8 /* Frameworks */ = {
+		2A3D4162199CF04FCD67B65B84194E6E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA524E381107BEE021E36E8CFDDB8866 /* Foundation.framework in Frameworks */,
+				7867DAC42C95B66CEA4FDDE9B04E77A7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A985DD9EAE6DB8F50034110DFFBDF51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5B05D710C49550971B7579A3F0D0E2E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,15 +135,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05DEDDA30D455CC2728CB39024359B2D /* Support Files */ = {
+		071226DBDF3CD303E323C966AE17C5FB /* common */ = {
 			isa = PBXGroup;
 			children = (
-				D874D9C80FA1F53051632DE704321234 /* FMDB.xcconfig */,
-				6258E712F1089BFF63A6B28B87669F03 /* FMDB-dummy.m */,
-				EA7F4524D2AF509C459F6B158E80820C /* FMDB-prefix.pch */,
+				B663F6DAF06D2A221396A1EC333888CF /* FMDatabase.h */,
+				052727EA3421C18215D4B908DF8B2581 /* FMDatabase.m */,
+				B2AC678A529E30753065D0EDC03424D8 /* FMDatabaseAdditions.h */,
+				F95B5D252CD2122FC7F1E23A16314E96 /* FMDatabaseAdditions.m */,
+				4EE77D98DE6EA89B994F7290A12CA9AF /* FMDatabasePool.h */,
+				6B6B871AC437233B8733AEE3AACD0466 /* FMDatabasePool.m */,
+				6E745C3AC3EDB4BB6A680709627D1E93 /* FMDatabaseQueue.h */,
+				6E7394506E280C290A914419572F5E18 /* FMDatabaseQueue.m */,
+				F684487F0EEA4D6738631F6215517840 /* FMDB.h */,
+				91B7AA390325471A6FCB2F5ACC13AFEC /* FMResultSet.h */,
+				61676BC9C938EE598E13A17C945F6740 /* FMResultSet.m */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/FMDB";
+			name = common;
+			sourceTree = "<group>";
+		};
+		332D9213AC1357AAC26136F5801F89F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				601DB5631F1EE77EBE564F1D0EC6E08B /* Color-Picker-for-iOS */,
+				98A5915F9B8AA95764AD6D7E1B45D92A /* FMDB */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		601DB5631F1EE77EBE564F1D0EC6E08B /* Color-Picker-for-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				365A30CC78290DDA5FB30537EC8C3AF6 /* HRBrightnessCursor.h */,
+				8700E9721A76DE175F8A2A9FFA6D3DD3 /* HRBrightnessCursor.m */,
+				8AABD86182B97A26315D5D038D99007A /* HRBrightnessSlider.h */,
+				EB8DDE8D11B441C7878F4A0F94E8B6D8 /* HRBrightnessSlider.m */,
+				63C2768A5546DD8A0D0AB8E472787049 /* HRColorCursor.h */,
+				1583C63392C991CB6890427CA5D6194C /* HRColorCursor.m */,
+				162E3D9BA8616D8C7CAE76C220334C82 /* HRColorInfoView.h */,
+				DF9448CE890ABDDADBBCBD821B434275 /* HRColorInfoView.m */,
+				24A19126301B535159742A081CAFA430 /* HRColorMapView.h */,
+				4CA0F592D4E675B8D1EE6F90380041B1 /* HRColorMapView.m */,
+				7B2335EF4AF67ABF9BD09E30A080FF7A /* HRColorPickerView.h */,
+				884641B68C002CCF766D881F6162B42C /* HRColorPickerView.m */,
+				51440F05E72BFC63F8D72947FF2FD230 /* HRHSVColorUtil.h */,
+				D19E6770D9CA734711891D4AFCB266D4 /* HRHSVColorUtil.m */,
+				99DFFE42C5094F58A45B662FA85022B7 /* UIImage+CoreGraphics.h */,
+				E5F5338DF1FA12FC7DA1105E1EF01172 /* UIImage+CoreGraphics.m */,
+				D0879F6EF8360CA38D7F8087F9535541 /* Support Files */,
+			);
+			path = "Color-Picker-for-iOS";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -98,10 +191,30 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				BFB8C92E749ED180124155E2270474D2 /* Pods */,
-				F310F29ACF2E6A02DBDBC7AD0EA689B6 /* Products */,
+				332D9213AC1357AAC26136F5801F89F6 /* Pods */,
+				B7F9A104AD51D79AAF1156975765E53E /* Products */,
 				BD19215A289C33F8F3730A89F6997ABA /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		98A5915F9B8AA95764AD6D7E1B45D92A /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				071226DBDF3CD303E323C966AE17C5FB /* common */,
+				9F9EC1A088FD4682E793D248B7EE1C3E /* Support Files */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		9F9EC1A088FD4682E793D248B7EE1C3E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC9C340448BD06B4E462D8B5B1A884AB /* FMDB.xcconfig */,
+				79CA2C8BA6C6CFEE75273E099CBD8586 /* FMDB-dummy.m */,
+				A2943F3D831BFF873B9FB4077C7DFB2D /* FMDB-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FMDB";
 			sourceTree = "<group>";
 		};
 		B46EECC2C49180F2AAC8E96C3FF5BE8C /* Pods-myBuddy */ = {
@@ -119,22 +232,14 @@
 			path = "Target Support Files/Pods-myBuddy";
 			sourceTree = "<group>";
 		};
-		B7377036971551BCDC2E2584548A576D /* common */ = {
+		B7F9A104AD51D79AAF1156975765E53E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				990191AC5970F54BD454007D4FC0B2C3 /* FMDatabase.h */,
-				B3B2DE6BA720930EA5A25DEAD9804D47 /* FMDatabase.m */,
-				B007C91029361327653F7DCE2E7599C0 /* FMDatabaseAdditions.h */,
-				F0F71FF0833DB53F536450483211F7CD /* FMDatabaseAdditions.m */,
-				5696C1F124500924CE065F8CEA33F978 /* FMDatabasePool.h */,
-				475630B9EDA128A2FEA091C9D63AED3F /* FMDatabasePool.m */,
-				AD57EB2E148CBB0484960AFCFB4C7588 /* FMDatabaseQueue.h */,
-				B42D69CD99479A04B6A708D9A1817E54 /* FMDatabaseQueue.m */,
-				CC2AA98E70EF15C6F8A88750F2680320 /* FMDB.h */,
-				FA296DC0E25687826F8CB594F359BD14 /* FMResultSet.h */,
-				B00FE45DA7886136FAD44633735B4DE3 /* FMResultSet.m */,
+				9F843D3FF6F6C0F9575B05E256EFA618 /* libColor-Picker-for-iOS.a */,
+				050AB6225F84DCAD124E49430A119D52 /* libFMDB.a */,
+				3A54E09437BDCFBA7DBDDDD6001EC634 /* libPods-myBuddy.a */,
 			);
-			name = common;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -161,35 +266,35 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		BFB8C92E749ED180124155E2270474D2 /* Pods */ = {
+		D0879F6EF8360CA38D7F8087F9535541 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				FA26C3825570D0641AC85B4710D11744 /* FMDB */,
+				9E204D37EE6BA61DB10F9DBFEFB9C7F5 /* Color-Picker-for-iOS.xcconfig */,
+				2A1F950375A67E915B6230FAA05223D6 /* Color-Picker-for-iOS-dummy.m */,
+				E109034CB0EF5FC388279237E33993D4 /* Color-Picker-for-iOS-prefix.pch */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		F310F29ACF2E6A02DBDBC7AD0EA689B6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E2BEF0E1A0D20A71D84A9D106647F023 /* libFMDB.a */,
-				87C73E45B7F731995184803D53AAFB9B /* libPods-myBuddy.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FA26C3825570D0641AC85B4710D11744 /* FMDB */ = {
-			isa = PBXGroup;
-			children = (
-				B7377036971551BCDC2E2584548A576D /* common */,
-				05DEDDA30D455CC2728CB39024359B2D /* Support Files */,
-			);
-			path = FMDB;
+			name = "Support Files";
+			path = "../Target Support Files/Color-Picker-for-iOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		269FA443B6B8CA9DB0B0C3127248894E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3E2CC3E109B55B339A42790AD234EB1 /* HRBrightnessCursor.h in Headers */,
+				16D429EAA6C41B28F1D675E5897F6DBE /* HRBrightnessSlider.h in Headers */,
+				0A8445C4C759BB51A3320DB395AB4295 /* HRColorCursor.h in Headers */,
+				176B8E64CB0030FEBBEFBD0BCA0D9055 /* HRColorInfoView.h in Headers */,
+				D5864DAFF8ECDBFBE5AEEE6A0CFF883B /* HRColorMapView.h in Headers */,
+				3DE8BFF25D562B007914942C350A3CBB /* HRColorPickerView.h in Headers */,
+				D57F683341674C7A7D48A0C99C163660 /* HRHSVColorUtil.h in Headers */,
+				64916E7543407BB7649DC9C94E189500 /* UIImage+CoreGraphics.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B2D82357BE4C2A10AB2CD4724B8E654 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -206,6 +311,41 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		7DB726C293FF63D27A2B8051108A4ACA /* Pods-myBuddy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6760D18547A62D89D765C8463E734FD5 /* Build configuration list for PBXNativeTarget "Pods-myBuddy" */;
+			buildPhases = (
+				29BEF3CFF8F7036184EB7AB8A94F72D6 /* Sources */,
+				6A985DD9EAE6DB8F50034110DFFBDF51 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED38D6371FF5D1DCC6C9D178BD2EC214 /* PBXTargetDependency */,
+				0E7128A63F0EFFE4D49C242CB9034F53 /* PBXTargetDependency */,
+			);
+			name = "Pods-myBuddy";
+			productName = "Pods-myBuddy";
+			productReference = 3A54E09437BDCFBA7DBDDDD6001EC634 /* libPods-myBuddy.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9A78C3A05A5998BFD2C6B372328EAE74 /* Color-Picker-for-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 147A0C0AD1140A4BECF20B28CD5826F7 /* Build configuration list for PBXNativeTarget "Color-Picker-for-iOS" */;
+			buildPhases = (
+				5480CD9644D78F6E98FE841276AA12A8 /* Sources */,
+				2A3D4162199CF04FCD67B65B84194E6E /* Frameworks */,
+				269FA443B6B8CA9DB0B0C3127248894E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Color-Picker-for-iOS";
+			productName = "Color-Picker-for-iOS";
+			productReference = 9F843D3FF6F6C0F9575B05E256EFA618 /* libColor-Picker-for-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		9F12FB4A63E20F601CFB2E64A65B57C1 /* FMDB */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AC899FD215914230EB9D8B57AD910D0 /* Build configuration list for PBXNativeTarget "FMDB" */;
@@ -220,24 +360,7 @@
 			);
 			name = FMDB;
 			productName = FMDB;
-			productReference = E2BEF0E1A0D20A71D84A9D106647F023 /* libFMDB.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		F685AB6203CF7F80DF7C12A96902694C /* Pods-myBuddy */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D743850B3CD30D363A0C31E6F825A1EC /* Build configuration list for PBXNativeTarget "Pods-myBuddy" */;
-			buildPhases = (
-				3D020C300071B12804702D37C6E4997B /* Sources */,
-				46A35399215BA872784144EFDFA5C0E8 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C88FAECA965BC1600E25B020558E833C /* PBXTargetDependency */,
-			);
-			name = "Pods-myBuddy";
-			productName = "Pods-myBuddy";
-			productReference = 87C73E45B7F731995184803D53AAFB9B /* libPods-myBuddy.a */;
+			productReference = 050AB6225F84DCAD124E49430A119D52 /* libFMDB.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -257,12 +380,13 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = F310F29ACF2E6A02DBDBC7AD0EA689B6 /* Products */;
+			productRefGroup = B7F9A104AD51D79AAF1156975765E53E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				9A78C3A05A5998BFD2C6B372328EAE74 /* Color-Picker-for-iOS */,
 				9F12FB4A63E20F601CFB2E64A65B57C1 /* FMDB */,
-				F685AB6203CF7F80DF7C12A96902694C /* Pods-myBuddy */,
+				7DB726C293FF63D27A2B8051108A4ACA /* Pods-myBuddy */,
 			);
 		};
 /* End PBXProject section */
@@ -281,29 +405,121 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3D020C300071B12804702D37C6E4997B /* Sources */ = {
+		29BEF3CFF8F7036184EB7AB8A94F72D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				329C29343DC96897AEB52EFF2C4AB39F /* Pods-myBuddy-dummy.m in Sources */,
+				265CA57A5D45532ED860BC03BDA83356 /* Pods-myBuddy-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5480CD9644D78F6E98FE841276AA12A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E501878013FD37E6DF0FF78B2C9A507B /* Color-Picker-for-iOS-dummy.m in Sources */,
+				1DF3F31DA9A188A74888671DA36E63F4 /* HRBrightnessCursor.m in Sources */,
+				39A837690E549A15ED2779A75451F7F0 /* HRBrightnessSlider.m in Sources */,
+				4C518DD88E60DC8F41E6EDE031F26174 /* HRColorCursor.m in Sources */,
+				397AE1D76B53C77818618FB5EC4706BB /* HRColorInfoView.m in Sources */,
+				CA3D1A1375D271A9ADAE59EBB5BF2698 /* HRColorMapView.m in Sources */,
+				3AD9DEE0D27BF3B662348D3F8ECEE5FC /* HRColorPickerView.m in Sources */,
+				0D402E944456A46BC35A466C19FC341A /* HRHSVColorUtil.m in Sources */,
+				1820BF0714109AC59CF7815E4C0FE641 /* UIImage+CoreGraphics.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C88FAECA965BC1600E25B020558E833C /* PBXTargetDependency */ = {
+		0E7128A63F0EFFE4D49C242CB9034F53 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FMDB;
 			target = 9F12FB4A63E20F601CFB2E64A65B57C1 /* FMDB */;
-			targetProxy = 263F5C75B09533FD6171625CE2858D9D /* PBXContainerItemProxy */;
+			targetProxy = AA4DD73B7C4BC4580FA419C1B8B8893A /* PBXContainerItemProxy */;
+		};
+		ED38D6371FF5D1DCC6C9D178BD2EC214 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Color-Picker-for-iOS";
+			target = 9A78C3A05A5998BFD2C6B372328EAE74 /* Color-Picker-for-iOS */;
+			targetProxy = C337B0AE475AC202CF5A03E921C61B8D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1776B5FDBFD517EABF677B0A637CA9D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8FBCB571496AE51C24DEF565F700A87 /* Pods-myBuddy.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		23DC0C45EECB795EE6E5CFCB8010202B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E204D37EE6BA61DB10F9DBFEFB9C7F5 /* Color-Picker-for-iOS.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Color-Picker-for-iOS/Color-Picker-for-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		31CD5E58B06032E285D228A93C0AD8ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E204D37EE6BA61DB10F9DBFEFB9C7F5 /* Color-Picker-for-iOS.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Color-Picker-for-iOS/Color-Picker-for-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5C3C3518264BF27D9B6A809C14C9E0E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8037C1DF40BF1664F979C6A3EBB7DC8 /* Pods-myBuddy.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		8B9C57E0B2B3B5515BFB2FC6C2CE5028 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D874D9C80FA1F53051632DE704321234 /* FMDB.xcconfig */;
+			baseConfigurationReference = FC9C340448BD06B4E462D8B5B1A884AB /* FMDB.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
@@ -358,26 +574,9 @@
 			};
 			name = Debug;
 		};
-		CB6E04A2A70294055A159355F107C0D8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8037C1DF40BF1664F979C6A3EBB7DC8 /* Pods-myBuddy.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		D5C38757B6CD1BC7048B564685142B74 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D874D9C80FA1F53051632DE704321234 /* FMDB.xcconfig */;
+			baseConfigurationReference = FC9C340448BD06B4E462D8B5B1A884AB /* FMDB.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
@@ -427,26 +626,18 @@
 			};
 			name = Release;
 		};
-		FA73758F06D426A0A82703FEB1A8290C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8FBCB571496AE51C24DEF565F700A87 /* Pods-myBuddy.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		147A0C0AD1140A4BECF20B28CD5826F7 /* Build configuration list for PBXNativeTarget "Color-Picker-for-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31CD5E58B06032E285D228A93C0AD8ED /* Debug */,
+				23DC0C45EECB795EE6E5CFCB8010202B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -465,11 +656,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D743850B3CD30D363A0C31E6F825A1EC /* Build configuration list for PBXNativeTarget "Pods-myBuddy" */ = {
+		6760D18547A62D89D765C8463E734FD5 /* Build configuration list for PBXNativeTarget "Pods-myBuddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FA73758F06D426A0A82703FEB1A8290C /* Debug */,
-				CB6E04A2A70294055A159355F107C0D8 /* Release */,
+				1776B5FDBFD517EABF677B0A637CA9D2 /* Debug */,
+				5C3C3518264BF27D9B6A809C14C9E0E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

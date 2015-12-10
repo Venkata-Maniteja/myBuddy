@@ -1,4 +1,5 @@
 PODS:
+  - Color-Picker-for-iOS (2.0.2)
   - FMDB (2.5):
     - FMDB/standard (= 2.5)
   - FMDB/common (2.5)
@@ -6,9 +7,11 @@ PODS:
     - FMDB/common
 
 DEPENDENCIES:
+  - Color-Picker-for-iOS (~> 2.0)
   - FMDB
 
 SPEC CHECKSUMS:
+  Color-Picker-for-iOS: 4980589b3e3cfe7198f227dd50be9adb02d8bc0b
   FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
 
 COCOAPODS: 0.39.0

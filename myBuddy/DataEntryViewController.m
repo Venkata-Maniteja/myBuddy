@@ -89,24 +89,66 @@
     [_takePic setBadgeNumber:x];
     [_takePic setNeedsDisplay];
     
-    [self insertData];
+    [self showAlertWithTitle:@"Saved" withMessage:[NSString stringWithFormat:@"Do you want to add color to the item \n[%@]",_nameField.text]];
+    
     
 }
 
--(void)insertData{
+-(void)insertDataWithColor:(BOOL)value{
     
     //create table fileBase(fileName text primary key, filePassword text ,fileURL text, filePasswordHint text,fileImage BLOB,fileEnteredTime DATETIME)
     
+    
+    NSString *color=value? @"" : nil;
+    
     [_database open];
-    [_database executeUpdate:@"insert into fileBase(fileName, filePassword ,filePasswordHint ,fileEnteredTime) values(?,?,?,?)",
-     _nameField.text,_passwordField.text,_hintField.text,[NSDate date],nil];
+    [_database executeUpdate:@"insert into fileBase(fileName, filePassword ,filePasswordHint ,fileColor,fileEnteredTime) values(?,?,?,?,?)",
+     _nameField.text,_passwordField.text,_hintField.text,color,[NSDate date],nil];
     [_database close];
+    
+    
     
     _nameField.text=@"";
     _passwordField.text=@"";
     _hintField.text=@"";
+
     
 }
+
+-(void)showCOlorPicker{
+    
+    //choose color, and then insert data
+    [self insertDataWithColor:YES];
+    
+}
+
+-(void)showAlertWithTitle:(NSString *)title withMessage:(NSString *)msg{
+    
+    UIAlertController *aC=[UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *ok=[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        [aC dismissViewControllerAnimated:YES completion:nil];
+        
+        //present the picker view
+        
+    }];
+     
+    UIAlertAction *cancel=[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        
+        [aC dismissViewControllerAnimated:YES completion:nil];
+        
+        //save data with dummy color
+        [self insertDataWithColor:NO];
+        
+    }];
+    
+    [aC addAction:ok];
+    [aC addAction:cancel];
+    
+    [self presentViewController:aC animated:YES completion:nil];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

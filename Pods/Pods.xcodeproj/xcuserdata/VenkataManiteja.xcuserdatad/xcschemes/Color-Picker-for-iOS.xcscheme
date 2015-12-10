@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F1D29EC61A1CCCE3B02424F9'
-               BlueprintName = 'FMDB'
+               BlueprintIdentifier = 'D757B9BA0A85FD4859BAC5ED'
+               BlueprintName = 'Color-Picker-for-iOS'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libFMDB.a'>
+               BuildableName = 'libColor-Picker-for-iOS.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

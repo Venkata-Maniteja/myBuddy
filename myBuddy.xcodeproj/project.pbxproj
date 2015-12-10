@@ -128,32 +128,10 @@
 		B80D9D121C0C8CCE004A1FF6 /* myBuddy */ = {
 			isa = PBXGroup;
 			children = (
-				B80D9D161C0C8CCE004A1FF6 /* AppDelegate.h */,
-				B80D9D171C0C8CCE004A1FF6 /* AppDelegate.m */,
-				B80D9D191C0C8CCE004A1FF6 /* ViewController.h */,
-				B80D9D1A1C0C8CCE004A1FF6 /* ViewController.m */,
-				B8192C961C0E26DD006E8E7E /* LoginViewController.h */,
-				B8192C971C0E26DD006E8E7E /* LoginViewController.m */,
-				B8192C991C0E319D006E8E7E /* LoginTextField.h */,
-				B8192C9A1C0E319D006E8E7E /* LoginTextField.m */,
-				B807DA151C18C90B00CC6539 /* ListViewController.h */,
-				B807DA161C18C90B00CC6539 /* ListViewController.m */,
-				5DE967B31C0EC6EB00DC62F9 /* CameraViewController.h */,
-				5DE967B41C0EC6EB00DC62F9 /* CameraViewController.m */,
-				B800302C1C0F8FFE004B0565 /* TabBarController.h */,
-				B800302D1C0F8FFE004B0565 /* TabBarController.m */,
-				B807DA101C18BBCF00CC6539 /* eyeMask.png */,
-				B807DA0A1C18B75E00CC6539 /* TakePicButton.h */,
-				B807DA0B1C18B75E00CC6539 /* TakePicButton.m */,
-				B807DA0D1C18BA8200CC6539 /* DataEntryViewController.h */,
-				B807DA0E1C18BA8200CC6539 /* DataEntryViewController.m */,
-				B807DA181C18D1EC00CC6539 /* ListDetailViewController.h */,
-				B807DA191C18D1EC00CC6539 /* ListDetailViewController.m */,
-				E5D41D331C1904A200F01ADA /* ListTableViewCell.h */,
-				E5D41D341C1904A200F01ADA /* ListTableViewCell.m */,
-				B83B3A461C15D4CA00C8F307 /* BuddyManager.h */,
-				B83B3A471C15D4CA00C8F307 /* BuddyManager.m */,
-				B80030291C0F4DB7004B0565 /* Screenshot.png */,
+				B869F8FE1C19BA1400BBF81C /* Delegates */,
+				B869F9001C19BA3300BBF81C /* Controllers */,
+				B869F8FD1C19B9FF00BBF81C /* ElementClasses */,
+				B869F8FF1C19BA1F00BBF81C /* Model */,
 				B800302B1C0F54CC004B0565 /* AnimationViews */,
 				B80D9D1C1C0C8CCE004A1FF6 /* Main.storyboard */,
 				B800301B1C0F2B5A004B0565 /* Launch Screen.storyboard */,
@@ -167,9 +145,63 @@
 		B80D9D131C0C8CCE004A1FF6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B80030291C0F4DB7004B0565 /* Screenshot.png */,
+				B807DA101C18BBCF00CC6539 /* eyeMask.png */,
 				B80D9D141C0C8CCE004A1FF6 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B869F8FD1C19B9FF00BBF81C /* ElementClasses */ = {
+			isa = PBXGroup;
+			children = (
+				B8192C991C0E319D006E8E7E /* LoginTextField.h */,
+				B8192C9A1C0E319D006E8E7E /* LoginTextField.m */,
+				B807DA0A1C18B75E00CC6539 /* TakePicButton.h */,
+				B807DA0B1C18B75E00CC6539 /* TakePicButton.m */,
+				E5D41D331C1904A200F01ADA /* ListTableViewCell.h */,
+				E5D41D341C1904A200F01ADA /* ListTableViewCell.m */,
+			);
+			name = ElementClasses;
+			sourceTree = "<group>";
+		};
+		B869F8FE1C19BA1400BBF81C /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				B80D9D161C0C8CCE004A1FF6 /* AppDelegate.h */,
+				B80D9D171C0C8CCE004A1FF6 /* AppDelegate.m */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		B869F8FF1C19BA1F00BBF81C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B83B3A461C15D4CA00C8F307 /* BuddyManager.h */,
+				B83B3A471C15D4CA00C8F307 /* BuddyManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B869F9001C19BA3300BBF81C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B80D9D191C0C8CCE004A1FF6 /* ViewController.h */,
+				B80D9D1A1C0C8CCE004A1FF6 /* ViewController.m */,
+				B8192C961C0E26DD006E8E7E /* LoginViewController.h */,
+				B8192C971C0E26DD006E8E7E /* LoginViewController.m */,
+				B807DA151C18C90B00CC6539 /* ListViewController.h */,
+				B807DA161C18C90B00CC6539 /* ListViewController.m */,
+				5DE967B31C0EC6EB00DC62F9 /* CameraViewController.h */,
+				5DE967B41C0EC6EB00DC62F9 /* CameraViewController.m */,
+				B800302C1C0F8FFE004B0565 /* TabBarController.h */,
+				B800302D1C0F8FFE004B0565 /* TabBarController.m */,
+				B807DA0D1C18BA8200CC6539 /* DataEntryViewController.h */,
+				B807DA0E1C18BA8200CC6539 /* DataEntryViewController.m */,
+				B807DA181C18D1EC00CC6539 /* ListDetailViewController.h */,
+				B807DA191C18D1EC00CC6539 /* ListDetailViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		EE7F6399C0D8598BA76BA772 /* Frameworks */ = {

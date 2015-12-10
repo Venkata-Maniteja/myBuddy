@@ -7,6 +7,7 @@ target 'myBuddy' do
 
 
 pod 'FMDB'
+pod "Color-Picker-for-iOS", "~> 2.0"
 
 
 end
