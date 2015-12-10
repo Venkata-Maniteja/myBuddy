@@ -10,6 +10,8 @@
 #import "TakePicButton.h"
 #import <FMDatabase.h>
 #import "BuddyManager.h"
+#import <HRColorPickerView.h>
+#import "ColorPickerViewController.h"
 
 @interface DataEntryViewController ()<UITextFieldDelegate>{
     int x;
@@ -23,7 +25,7 @@
 @property (nonatomic,strong) BuddyManager *manager;
 @property (nonatomic,strong) FMDatabase *database;
 
-
+@property (nonatomic,strong) HRColorPickerView *pickerView;
 
 
 @end
@@ -89,6 +91,17 @@
     [_takePic setBadgeNumber:x];
     [_takePic setNeedsDisplay];
     
+    _pickerView = [[HRColorPickerView alloc] init];
+    _pickerView.color = [UIColor blueColor];
+    [_pickerView addTarget:self
+                    action:@selector(action:)
+          forControlEvents:UIControlEventValueChanged];
+    
+    ColorPickerViewController *colVC=[ColorPickerViewController pickerController];
+    
+    [self.view addSubview:colVC.view];
+
+    
     [self showAlertWithTitle:@"Saved" withMessage:[NSString stringWithFormat:@"Do you want to add color to the item \n[%@]",_nameField.text]];
     
     
@@ -132,6 +145,7 @@
         
         //present the picker view
         
+        
     }];
      
     UIAlertAction *cancel=[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
@@ -147,6 +161,11 @@
     [aC addAction:cancel];
     
     [self presentViewController:aC animated:YES completion:nil];
+}
+
+-(void)action:(id)sender{
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

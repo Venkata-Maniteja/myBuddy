@@ -180,7 +180,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="S8M-hD-YHU"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A3O-ZM-0Td">
@@ -259,19 +259,19 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nco-qB-wTN">
                                         <rect key="frame" x="0.0" y="0.0" width="520" height="67"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWx-4e-ax9">
                                         <rect key="frame" x="0.0" y="67" width="520" height="66"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvv-bp-O3B">
                                         <rect key="frame" x="0.0" y="133" width="520" height="67"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -300,6 +300,101 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLe-Qw-o8R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3031" y="1217"/>
+        </scene>
+        <!--Color Picker View Controller-->
+        <scene sceneID="LAC-ab-HRs">
+            <objects>
+                <viewController storyboardIdentifier="ColorPicker" id="hkc-pq-MG0" customClass="ColorPickerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vyu-T6-GAg"/>
+                        <viewControllerLayoutGuide type="bottom" id="SFn-5b-0Oz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EbW-Xc-v6a">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmM-ef-HdX" customClass="HRColorPickerView">
+                                <rect key="frame" x="0.0" y="20" width="600" height="149"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ish-A5-tTy" customClass="HRColorInfoView">
+                                        <rect key="frame" x="19" y="26" width="101" height="98"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="98" id="Qp3-ec-6AW"/>
+                                            <constraint firstAttribute="width" constant="101" id="hDe-YT-j6Q"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xqe-jK-ZWz" customClass="HRBrightnessSlider">
+                                        <rect key="frame" x="150" y="68" width="426" height="14"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="P7a-1O-f0o"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="1" green="0.64212084374968637" blue="0.59018465425407007" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xqe-jK-ZWz" firstAttribute="leading" secondItem="Ish-A5-tTy" secondAttribute="trailing" constant="30" id="6Ce-Jt-POR"/>
+                                    <constraint firstItem="xqe-jK-ZWz" firstAttribute="centerY" secondItem="fmM-ef-HdX" secondAttribute="centerY" id="KsW-R5-pG6"/>
+                                    <constraint firstAttribute="trailing" secondItem="xqe-jK-ZWz" secondAttribute="trailing" constant="24" id="Q7t-7B-quE"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ish-A5-tTy" secondAttribute="trailing" constant="480" id="WwM-6O-GiH"/>
+                                    <constraint firstItem="Ish-A5-tTy" firstAttribute="centerY" secondItem="xqe-jK-ZWz" secondAttribute="centerY" id="iCw-Bd-i8W"/>
+                                    <constraint firstItem="Ish-A5-tTy" firstAttribute="leading" secondItem="fmM-ef-HdX" secondAttribute="leading" constant="19" id="rQ8-0j-5lP"/>
+                                    <constraint firstItem="Ish-A5-tTy" firstAttribute="top" secondItem="fmM-ef-HdX" secondAttribute="top" constant="26" id="xjd-fd-o0U"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WwM-6O-GiH"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="brightnessSlider" destination="xqe-jK-ZWz" id="cgJ-h0-vb1"/>
+                                    <outlet property="colorInfoView" destination="Ish-A5-tTy" id="zAR-Nz-Xoz"/>
+                                    <outlet property="colorMapView" destination="ohG-1b-ool" id="ixA-VR-4Ue"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohG-1b-ool" customClass="HRColorMapView">
+                                <rect key="frame" x="0.0" y="169" width="600" height="431"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="saturationUpperLimit">
+                                        <real key="value" value="0.94999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tileSize">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fmM-ef-HdX" firstAttribute="top" secondItem="Vyu-T6-GAg" secondAttribute="bottom" id="79e-UC-rZS"/>
+                            <constraint firstItem="ohG-1b-ool" firstAttribute="width" secondItem="fmM-ef-HdX" secondAttribute="width" id="7Ik-n7-yj1"/>
+                            <constraint firstItem="ohG-1b-ool" firstAttribute="top" secondItem="fmM-ef-HdX" secondAttribute="bottom" id="9Zu-15-3Js"/>
+                            <constraint firstAttribute="trailing" secondItem="ohG-1b-ool" secondAttribute="trailing" id="EWz-5p-jbC"/>
+                            <constraint firstItem="fmM-ef-HdX" firstAttribute="leading" secondItem="EbW-Xc-v6a" secondAttribute="leading" id="KeZ-5F-pXt"/>
+                            <constraint firstItem="ohG-1b-ool" firstAttribute="leading" secondItem="EbW-Xc-v6a" secondAttribute="leading" id="R5e-mt-gLZ"/>
+                            <constraint firstItem="ohG-1b-ool" firstAttribute="top" secondItem="fmM-ef-HdX" secondAttribute="bottom" id="Tyc-Qy-dMb"/>
+                            <constraint firstItem="SFn-5b-0Oz" firstAttribute="top" secondItem="ohG-1b-ool" secondAttribute="bottom" id="hSe-Zb-NdI"/>
+                            <constraint firstItem="ohG-1b-ool" firstAttribute="top" secondItem="EbW-Xc-v6a" secondAttribute="top" constant="169" id="j1u-cF-Jf3"/>
+                            <constraint firstItem="fmM-ef-HdX" firstAttribute="centerX" secondItem="EbW-Xc-v6a" secondAttribute="centerX" id="uKu-jp-JNd"/>
+                            <constraint firstAttribute="trailing" secondItem="fmM-ef-HdX" secondAttribute="trailing" id="z8f-CM-LBP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="uKu-jp-JNd"/>
+                                <exclude reference="7Ik-n7-yj1"/>
+                                <exclude reference="j1u-cF-Jf3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fmL-7t-t4W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2366" y="-240"/>
         </scene>
         <!--Data Entry View Controller-->
         <scene sceneID="fpK-mY-b56">
