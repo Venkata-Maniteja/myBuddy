@@ -4,6 +4,8 @@
 //
 //  Created by Venkata Maniteja on 2015-12-07.
 //  Copyright © 2015 Venkata Maniteja. All rights reserved.
+
+//choose color on data entry view ocntroller to represent the data
 //
 
 #import <Foundation/Foundation.h>
@@ -32,6 +34,17 @@
 + (void)deleteDatabase;
 + (void)archiveDatabase;
 - (id)getDatabase;
+
+#pragma objects for lest view
+
+@property (nonatomic,strong) NSString *fileName;
+@property (nonatomic,strong) NSString *filePassword;
+@property (nonatomic,strong) NSString *hint;
+//@property (nonatomic,strong) UIImage *fileImage;
+
+
+
+
 
 
 

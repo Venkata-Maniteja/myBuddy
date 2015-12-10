@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4412A87D6089B9D779A84D58 /* libPods-myBuddy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D66073C8996CF29B52B1C3E /* libPods-myBuddy.a */; };
-		5DE967B21C0EC6C600DC62F9 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE967B11C0EC6C600DC62F9 /* ListViewController.m */; };
 		5DE967B51C0EC6EB00DC62F9 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE967B41C0EC6EB00DC62F9 /* CameraViewController.m */; };
 		5DE967B71C0ECAA900DC62F9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE967B61C0ECAA900DC62F9 /* libsqlite3.0.tbd */; };
 		B800301C1C0F2B5A004B0565 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B800301B1C0F2B5A004B0565 /* Launch Screen.storyboard */; };
@@ -16,6 +15,11 @@
 		B80030251C0F47D9004B0565 /* StackView.m in Sources */ = {isa = PBXBuildFile; fileRef = B80030241C0F47D9004B0565 /* StackView.m */; };
 		B800302A1C0F4DB7004B0565 /* Screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = B80030291C0F4DB7004B0565 /* Screenshot.png */; };
 		B800302E1C0F8FFE004B0565 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B800302D1C0F8FFE004B0565 /* TabBarController.m */; };
+		B807DA0C1C18B75E00CC6539 /* TakePicButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B807DA0B1C18B75E00CC6539 /* TakePicButton.m */; };
+		B807DA0F1C18BA8200CC6539 /* DataEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B807DA0E1C18BA8200CC6539 /* DataEntryViewController.m */; };
+		B807DA111C18BBCF00CC6539 /* eyeMask.png in Resources */ = {isa = PBXBuildFile; fileRef = B807DA101C18BBCF00CC6539 /* eyeMask.png */; };
+		B807DA171C18C90B00CC6539 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B807DA161C18C90B00CC6539 /* ListViewController.m */; };
+		B807DA1A1C18D1EC00CC6539 /* ListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B807DA191C18D1EC00CC6539 /* ListDetailViewController.m */; };
 		B80D9D151C0C8CCE004A1FF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B80D9D141C0C8CCE004A1FF6 /* main.m */; };
 		B80D9D181C0C8CCE004A1FF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B80D9D171C0C8CCE004A1FF6 /* AppDelegate.m */; };
 		B80D9D1B1C0C8CCE004A1FF6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B80D9D1A1C0C8CCE004A1FF6 /* ViewController.m */; };
@@ -28,8 +32,6 @@
 
 /* Begin PBXFileReference section */
 		1D66073C8996CF29B52B1C3E /* libPods-myBuddy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myBuddy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DE967B01C0EC6C600DC62F9 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListViewController.h; path = ../ListViewController.h; sourceTree = "<group>"; };
-		5DE967B11C0EC6C600DC62F9 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListViewController.m; path = ../ListViewController.m; sourceTree = "<group>"; };
 		5DE967B31C0EC6EB00DC62F9 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = ../CameraViewController.h; sourceTree = "<group>"; };
 		5DE967B41C0EC6EB00DC62F9 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = ../CameraViewController.m; sourceTree = "<group>"; };
 		5DE967B61C0ECAA900DC62F9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -41,6 +43,15 @@
 		B80030291C0F4DB7004B0565 /* Screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot.png; sourceTree = "<group>"; };
 		B800302C1C0F8FFE004B0565 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		B800302D1C0F8FFE004B0565 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		B807DA0A1C18B75E00CC6539 /* TakePicButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakePicButton.h; sourceTree = "<group>"; };
+		B807DA0B1C18B75E00CC6539 /* TakePicButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakePicButton.m; sourceTree = "<group>"; };
+		B807DA0D1C18BA8200CC6539 /* DataEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataEntryViewController.h; sourceTree = "<group>"; };
+		B807DA0E1C18BA8200CC6539 /* DataEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataEntryViewController.m; sourceTree = "<group>"; };
+		B807DA101C18BBCF00CC6539 /* eyeMask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyeMask.png; sourceTree = "<group>"; };
+		B807DA151C18C90B00CC6539 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		B807DA161C18C90B00CC6539 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		B807DA181C18D1EC00CC6539 /* ListDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListDetailViewController.h; sourceTree = "<group>"; };
+		B807DA191C18D1EC00CC6539 /* ListDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDetailViewController.m; sourceTree = "<group>"; };
 		B80D9D101C0C8CCE004A1FF6 /* myBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B80D9D141C0C8CCE004A1FF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B80D9D161C0C8CCE004A1FF6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -122,16 +133,23 @@
 				B8192C971C0E26DD006E8E7E /* LoginViewController.m */,
 				B8192C991C0E319D006E8E7E /* LoginTextField.h */,
 				B8192C9A1C0E319D006E8E7E /* LoginTextField.m */,
+				B807DA151C18C90B00CC6539 /* ListViewController.h */,
+				B807DA161C18C90B00CC6539 /* ListViewController.m */,
 				5DE967B31C0EC6EB00DC62F9 /* CameraViewController.h */,
 				5DE967B41C0EC6EB00DC62F9 /* CameraViewController.m */,
 				B800302C1C0F8FFE004B0565 /* TabBarController.h */,
 				B800302D1C0F8FFE004B0565 /* TabBarController.m */,
+				B807DA101C18BBCF00CC6539 /* eyeMask.png */,
+				B807DA0A1C18B75E00CC6539 /* TakePicButton.h */,
+				B807DA0B1C18B75E00CC6539 /* TakePicButton.m */,
+				B807DA0D1C18BA8200CC6539 /* DataEntryViewController.h */,
+				B807DA0E1C18BA8200CC6539 /* DataEntryViewController.m */,
+				B807DA181C18D1EC00CC6539 /* ListDetailViewController.h */,
+				B807DA191C18D1EC00CC6539 /* ListDetailViewController.m */,
 				B83B3A461C15D4CA00C8F307 /* BuddyManager.h */,
 				B83B3A471C15D4CA00C8F307 /* BuddyManager.m */,
 				B80030291C0F4DB7004B0565 /* Screenshot.png */,
 				B800302B1C0F54CC004B0565 /* AnimationViews */,
-				5DE967B01C0EC6C600DC62F9 /* ListViewController.h */,
-				5DE967B11C0EC6C600DC62F9 /* ListViewController.m */,
 				B80D9D1C1C0C8CCE004A1FF6 /* Main.storyboard */,
 				B800301B1C0F2B5A004B0565 /* Launch Screen.storyboard */,
 				B80D9D1F1C0C8CCE004A1FF6 /* Assets.xcassets */,
@@ -217,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B807DA111C18BBCF00CC6539 /* eyeMask.png in Resources */,
 				B800301C1C0F2B5A004B0565 /* Launch Screen.storyboard in Resources */,
 				B80D9D201C0C8CCE004A1FF6 /* Assets.xcassets in Resources */,
 				B80D9D1E1C0C8CCE004A1FF6 /* Main.storyboard in Resources */,
@@ -281,12 +300,15 @@
 			files = (
 				B8192C981C0E26DD006E8E7E /* LoginViewController.m in Sources */,
 				B80D9D1B1C0C8CCE004A1FF6 /* ViewController.m in Sources */,
-				5DE967B21C0EC6C600DC62F9 /* ListViewController.m in Sources */,
+				B807DA171C18C90B00CC6539 /* ListViewController.m in Sources */,
+				B807DA0F1C18BA8200CC6539 /* DataEntryViewController.m in Sources */,
 				B800302E1C0F8FFE004B0565 /* TabBarController.m in Sources */,
 				B83B3A481C15D4CA00C8F307 /* BuddyManager.m in Sources */,
 				B80D9D181C0C8CCE004A1FF6 /* AppDelegate.m in Sources */,
 				B80D9D151C0C8CCE004A1FF6 /* main.m in Sources */,
 				5DE967B51C0EC6EB00DC62F9 /* CameraViewController.m in Sources */,
+				B807DA0C1C18B75E00CC6539 /* TakePicButton.m in Sources */,
+				B807DA1A1C18D1EC00CC6539 /* ListDetailViewController.m in Sources */,
 				B8192C9B1C0E319D006E8E7E /* LoginTextField.m in Sources */,
 				B80030251C0F47D9004B0565 /* StackView.m in Sources */,
 			);
