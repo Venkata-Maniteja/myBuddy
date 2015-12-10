@@ -10,6 +10,7 @@
 #import "BuddyManager.h"
 #import <FMDatabase.h>
 #import "ListDetailViewController.h"
+#import "ListTableViewCell.h"
 @interface ListViewController ()<UITableViewDataSource,UITableViewDelegate>{
     
     IBOutlet UITableView *listView;
@@ -92,12 +93,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:  (NSIndexPath *)indexPath  {
     
     static NSString *CellIdentifer = @"listCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifer];
+    ListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifer];
     
     // Using a cell identifier will allow your app to reuse cells as they come and go from the screen.
     if (cell == nil)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifer];
+        cell = [[ListTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifer];
     }
     
     // Deciding which data to put into this particular cell.
@@ -106,7 +107,7 @@
     BuddyManager *dataDisplay=[_dataSet objectAtIndex:indexPath.row];
     
     
-    cell.textLabel.text = dataDisplay.fileName;
+    cell.fileName.text = dataDisplay.fileName;
     
     return cell;
 

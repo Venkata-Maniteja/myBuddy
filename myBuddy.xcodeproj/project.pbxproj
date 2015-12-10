@@ -28,6 +28,7 @@
 		B8192C981C0E26DD006E8E7E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8192C971C0E26DD006E8E7E /* LoginViewController.m */; };
 		B8192C9B1C0E319D006E8E7E /* LoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B8192C9A1C0E319D006E8E7E /* LoginTextField.m */; };
 		B83B3A481C15D4CA00C8F307 /* BuddyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B83B3A471C15D4CA00C8F307 /* BuddyManager.m */; };
+		E5D41D351C1904A200F01ADA /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D41D341C1904A200F01ADA /* ListTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,8 @@
 		B83B3A461C15D4CA00C8F307 /* BuddyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuddyManager.h; sourceTree = "<group>"; };
 		B83B3A471C15D4CA00C8F307 /* BuddyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuddyManager.m; sourceTree = "<group>"; };
 		D14065A071F8D4C71700CC4B /* Pods-myBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-myBuddy/Pods-myBuddy.debug.xcconfig"; sourceTree = "<group>"; };
+		E5D41D331C1904A200F01ADA /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
+		E5D41D341C1904A200F01ADA /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +149,8 @@
 				B807DA0E1C18BA8200CC6539 /* DataEntryViewController.m */,
 				B807DA181C18D1EC00CC6539 /* ListDetailViewController.h */,
 				B807DA191C18D1EC00CC6539 /* ListDetailViewController.m */,
+				E5D41D331C1904A200F01ADA /* ListTableViewCell.h */,
+				E5D41D341C1904A200F01ADA /* ListTableViewCell.m */,
 				B83B3A461C15D4CA00C8F307 /* BuddyManager.h */,
 				B83B3A471C15D4CA00C8F307 /* BuddyManager.m */,
 				B80030291C0F4DB7004B0565 /* Screenshot.png */,
@@ -309,6 +314,7 @@
 				5DE967B51C0EC6EB00DC62F9 /* CameraViewController.m in Sources */,
 				B807DA0C1C18B75E00CC6539 /* TakePicButton.m in Sources */,
 				B807DA1A1C18D1EC00CC6539 /* ListDetailViewController.m in Sources */,
+				E5D41D351C1904A200F01ADA /* ListTableViewCell.m in Sources */,
 				B8192C9B1C0E319D006E8E7E /* LoginTextField.m in Sources */,
 				B80030251C0F47D9004B0565 /* StackView.m in Sources */,
 			);
