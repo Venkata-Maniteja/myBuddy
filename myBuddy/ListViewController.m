@@ -66,6 +66,7 @@
         data.filePassword=[_results stringForColumn:@"filePassword"];
         data.fileName=[_results stringForColumn:@"fileName"];
         data.hint=[_results stringForColumn:@"filePasswordHint"];
+        data.colorName=[_results stringForColumn:@"fileColor"];
        
         [_dataSet addObject:data];
     }
@@ -108,11 +109,19 @@
     
     BuddyManager *dataDisplay=[_dataSet objectAtIndex:indexPath.row];
     
-    
+    cell.backgroundColor=[self convertStringToColor:dataDisplay.colorName];
     cell.fileName.text = dataDisplay.fileName;
+    cell.icon.hidden=YES;
     
     return cell;
 
+}
+
+-(UIColor *)convertStringToColor:(NSString *)string{
+    
+    NSArray *parts = [string componentsSeparatedByString:@" "];
+     
+    return [UIColor colorWithRed:[parts[0] floatValue] green:[parts[1] floatValue] blue:[parts[2] floatValue] alpha:[parts[3] floatValue]];
 }
 
 

@@ -40,7 +40,7 @@
 @property (nonatomic,strong) NSString *fileName;
 @property (nonatomic,strong) NSString *filePassword;
 @property (nonatomic,strong) NSString *hint;
-//@property (nonatomic,strong) UIImage *fileImage;
+@property (nonatomic,strong) NSString *colorName;
 
 
 

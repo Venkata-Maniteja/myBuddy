@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <HRColorInfoView.h>
 @interface ColorPickerViewController : UIViewController
 
 +(instancetype)pickerController;
+@property (nonatomic,weak) IBOutlet UIButton *done;
+
+
+@property (nonatomic, strong) IBOutlet HRColorInfoView  *colorInfoView;
+@property (nonatomic, strong) IBOutlet UIControl  *colorMapView;
+@property (nonatomic, strong) IBOutlet UIControl  *brightnessSlider;
 
 @end

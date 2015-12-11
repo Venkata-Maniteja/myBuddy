@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Color-Picker-for-iOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>FMDB.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,16 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>3C96BD1E5702C53B40B43510E0A0882C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7DB726C293FF63D27A2B8051108A4ACA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A78C3A05A5998BFD2C6B372328EAE74</key>
 		<dict>
 			<key>primary</key>
 			<true/>

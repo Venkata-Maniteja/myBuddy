@@ -23,7 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    application.statusBarHidden=YES;
     _manager=[BuddyManager sharedManager];
     
     if (![[NSUserDefaults standardUserDefaults]boolForKey:@"BaseCreated"]) {

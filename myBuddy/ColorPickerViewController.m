@@ -10,6 +10,8 @@
 
 @interface ColorPickerViewController ()
 
+
+
 @end
 
 @implementation ColorPickerViewController
@@ -18,6 +20,18 @@
     
     return [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"ColorPicker"];
 }
+
+-(IBAction)dismissColorPicker:(id)sender{
+    
+    [self.view removeFromSuperview];
+}
+
+-(void)viewDidLoad{
+    
+    [super viewDidLoad];
+}
+
+
 
 /*
 #pragma mark - Navigation

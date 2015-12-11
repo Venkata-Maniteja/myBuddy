@@ -25,7 +25,9 @@
 @property (nonatomic,strong) BuddyManager *manager;
 @property (nonatomic,strong) FMDatabase *database;
 
-@property (nonatomic,strong) HRColorPickerView *pickerView;
+@property (nonatomic,strong)  ColorPickerViewController *colVC;
+
+@property (nonatomic,strong) UIColor *selectedColor;
 
 
 @end
@@ -36,6 +38,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+   
     _manager=[BuddyManager sharedManager];
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -75,6 +78,7 @@
     
 }
 
+
 #pragma textfield delegate methods
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField{
@@ -91,19 +95,43 @@
     [_takePic setBadgeNumber:x];
     [_takePic setNeedsDisplay];
     
-    _pickerView = [[HRColorPickerView alloc] init];
-    _pickerView.color = [UIColor blueColor];
-    [_pickerView addTarget:self
-                    action:@selector(action:)
-          forControlEvents:UIControlEventValueChanged];
-    
-    ColorPickerViewController *colVC=[ColorPickerViewController pickerController];
-    
-    [self.view addSubview:colVC.view];
-
-    
+   
     [self showAlertWithTitle:@"Saved" withMessage:[NSString stringWithFormat:@"Do you want to add color to the item \n[%@]",_nameField.text]];
     
+    
+}
+
+-(void)addPicker{
+    
+    
+   _colVC=[ColorPickerViewController pickerController];
+   
+    _colVC.view.tag=2;
+    
+    [_colVC.done addTarget:self action:@selector(doneClicked) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_colVC.view];
+  
+}
+
+-(void)doneClicked{
+    
+    _selectedColor=_colVC.colorInfoView.color;
+    [self insertDataWithColor:YES];
+    for (UIView *view in self.view.subviews){
+    
+        if ([view tag]==2) {
+            
+            [UIView animateWithDuration:0.3 animations:^{
+                view.alpha=0.0;
+            } completion:^(BOOL finished) {
+                [view removeFromSuperview];
+            }];
+           
+            
+
+        }
+    
+    }
     
 }
 
@@ -112,7 +140,7 @@
     //create table fileBase(fileName text primary key, filePassword text ,fileURL text, filePasswordHint text,fileImage BLOB,fileEnteredTime DATETIME)
     
     
-    NSString *color=value? @"" : nil;
+    NSString *color=value? [self convertColorToString] : nil;
     
     [_database open];
     [_database executeUpdate:@"insert into fileBase(fileName, filePassword ,filePasswordHint ,fileColor,fileEnteredTime) values(?,?,?,?,?)",
@@ -128,10 +156,9 @@
     
 }
 
--(void)showCOlorPicker{
+-(NSString *)convertColorToString{
     
-    //choose color, and then insert data
-    [self insertDataWithColor:YES];
+   return [[CIColor colorWithCGColor:_selectedColor.CGColor] stringRepresentation];
     
 }
 
@@ -139,11 +166,14 @@
     
     UIAlertController *aC=[UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
     
+    
+    
     UIAlertAction *ok=[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
         [aC dismissViewControllerAnimated:YES completion:nil];
         
         //present the picker view
+         [self addPicker];
         
         
     }];
