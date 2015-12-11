@@ -96,7 +96,15 @@
     [_takePic setNeedsDisplay];
     
    
-    [self showAlertWithTitle:@"Saved" withMessage:[NSString stringWithFormat:@"Do you want to add color to the item \n[%@]",_nameField.text]];
+    
+    if ([_nameField.text isEqualToString:@""]) {
+        
+        [self showAlertWithTitle:@"Please enter all details to save" withMessage:@"One or more fields are empty."];
+    }else{
+        [self showAlertWithTitle:@"Saved" withMessage:[NSString stringWithFormat:@"Do you want to add color to the item \n[%@]",_nameField.text]];
+
+    }
+    
     
     
 }
@@ -137,8 +145,6 @@
 
 -(void)insertDataWithColor:(BOOL)value{
     
-    //create table fileBase(fileName text primary key, filePassword text ,fileURL text, filePasswordHint text,fileImage BLOB,fileEnteredTime DATETIME)
-    
     
     NSString *color=value? [self convertColorToString] : nil;
     
@@ -152,6 +158,7 @@
     _nameField.text=@"";
     _passwordField.text=@"";
     _hintField.text=@"";
+    
 
     
 }
@@ -173,7 +180,11 @@
         [aC dismissViewControllerAnimated:YES completion:nil];
         
         //present the picker view
-         [self addPicker];
+        
+        if ([title isEqualToString:@"Saved"]) {
+             [self addPicker];
+        }
+        
         
         
     }];
@@ -183,7 +194,9 @@
         [aC dismissViewControllerAnimated:YES completion:nil];
         
         //save data with dummy color
-        [self insertDataWithColor:NO];
+        if ([title isEqualToString:@"Saved"]) {
+              [self insertDataWithColor:NO];
+        }
         
     }];
     
