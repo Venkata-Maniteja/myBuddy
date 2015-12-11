@@ -7,8 +7,15 @@
 //
 
 #import "ViewController.h"
+#import "ActivityAnimationView.h"
 
 @interface ViewController ()
+
+@property (nonatomic,weak) IBOutlet UISlider *move;
+@property (nonatomic,weak) IBOutlet UISlider *exercise;
+@property (nonatomic,weak) IBOutlet UISlider *stand;
+
+@property (nonatomic,strong) UIView *animeView;
 
 @end
 
@@ -20,6 +27,12 @@
     
 
    
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    
+    [super viewDidAppear:animated];
+      
 }
 
 - (void)didReceiveMemoryWarning {

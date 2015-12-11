@@ -29,6 +29,8 @@
 		B8192C9B1C0E319D006E8E7E /* LoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B8192C9A1C0E319D006E8E7E /* LoginTextField.m */; };
 		B81F169A1C1A2C2200E4EFD7 /* ColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B81F16991C1A2C2200E4EFD7 /* ColorPickerViewController.m */; };
 		B83B3A481C15D4CA00C8F307 /* BuddyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B83B3A471C15D4CA00C8F307 /* BuddyManager.m */; };
+		E50573241C1AE07F0081332E /* ActivityAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E50573231C1AE07F0081332E /* ActivityAnimationView.m */; };
+		E50573271C1AE3620081332E /* ActivityAnimationHolderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E50573261C1AE3620081332E /* ActivityAnimationHolderView.m */; };
 		E5D41D351C1904A200F01ADA /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D41D341C1904A200F01ADA /* ListTableViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,10 @@
 		B83B3A461C15D4CA00C8F307 /* BuddyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuddyManager.h; sourceTree = "<group>"; };
 		B83B3A471C15D4CA00C8F307 /* BuddyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuddyManager.m; sourceTree = "<group>"; };
 		D14065A071F8D4C71700CC4B /* Pods-myBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-myBuddy/Pods-myBuddy.debug.xcconfig"; sourceTree = "<group>"; };
+		E50573221C1AE07F0081332E /* ActivityAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityAnimationView.h; sourceTree = SOURCE_ROOT; };
+		E50573231C1AE07F0081332E /* ActivityAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityAnimationView.m; sourceTree = SOURCE_ROOT; };
+		E50573251C1AE3620081332E /* ActivityAnimationHolderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityAnimationHolderView.h; sourceTree = "<group>"; };
+		E50573261C1AE3620081332E /* ActivityAnimationHolderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityAnimationHolderView.m; sourceTree = "<group>"; };
 		E5D41D331C1904A200F01ADA /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
 		E5D41D341C1904A200F01ADA /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,6 +203,10 @@
 				B807DA161C18C90B00CC6539 /* ListViewController.m */,
 				5DE967B31C0EC6EB00DC62F9 /* CameraViewController.h */,
 				5DE967B41C0EC6EB00DC62F9 /* CameraViewController.m */,
+				E50573221C1AE07F0081332E /* ActivityAnimationView.h */,
+				E50573251C1AE3620081332E /* ActivityAnimationHolderView.h */,
+				E50573261C1AE3620081332E /* ActivityAnimationHolderView.m */,
+				E50573231C1AE07F0081332E /* ActivityAnimationView.m */,
 				B800302C1C0F8FFE004B0565 /* TabBarController.h */,
 				B800302D1C0F8FFE004B0565 /* TabBarController.m */,
 				B807DA0D1C18BA8200CC6539 /* DataEntryViewController.h */,
@@ -349,7 +359,9 @@
 				B83B3A481C15D4CA00C8F307 /* BuddyManager.m in Sources */,
 				B80D9D181C0C8CCE004A1FF6 /* AppDelegate.m in Sources */,
 				B80D9D151C0C8CCE004A1FF6 /* main.m in Sources */,
+				E50573271C1AE3620081332E /* ActivityAnimationHolderView.m in Sources */,
 				5DE967B51C0EC6EB00DC62F9 /* CameraViewController.m in Sources */,
+				E50573241C1AE07F0081332E /* ActivityAnimationView.m in Sources */,
 				B807DA0C1C18B75E00CC6539 /* TakePicButton.m in Sources */,
 				B807DA1A1C18D1EC00CC6539 /* ListDetailViewController.m in Sources */,
 				E5D41D351C1904A200F01ADA /* ListTableViewCell.m in Sources */,

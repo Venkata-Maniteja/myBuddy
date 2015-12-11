@@ -41,6 +41,8 @@
     NSString *path = [docsPath stringByAppendingPathComponent:@"buddyDatabase.sqlite"];
     _database = [FMDatabase databaseWithPath:path];
     
+   
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated{
