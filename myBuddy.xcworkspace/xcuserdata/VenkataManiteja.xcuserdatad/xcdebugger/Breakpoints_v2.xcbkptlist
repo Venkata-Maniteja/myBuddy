@@ -63,8 +63,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
             endingLineNumber = "90"
-            landmarkName = "-takePic:"
-            landmarkType = "5">
+            landmarkName = "@implementation DataEntryViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -74,12 +74,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "myBuddy/DataEntryViewController.m"
-            timestampString = "471477438.159303"
+            timestampString = "471561888.611984"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
-            landmarkName = "-action:"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "-convertColorToString"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

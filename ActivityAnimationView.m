@@ -21,7 +21,7 @@
 
 #pragma mark Drawing Methods
 
-+ (void)drawActivityWithMoveLevel: (CGFloat)moveLevel exersizeLevel: (CGFloat)exersizeLevel standLevel: (CGFloat)standLevel
++ (void)drawActivityWithMoveLevel: (CGFloat)moveLevel exersizeLevel: (CGFloat)exersizeLevel standLevel: (CGFloat)standLevel 
 {
     //// General Declarations
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();

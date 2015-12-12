@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ActivityAnimationView.h"
+#import "ActivityAnimationHolderView.h"
 
 @interface ViewController ()
 
@@ -15,7 +16,7 @@
 @property (nonatomic,weak) IBOutlet UISlider *exercise;
 @property (nonatomic,weak) IBOutlet UISlider *stand;
 
-@property (nonatomic,strong) UIView *animeView;
+@property (nonatomic,strong) IBOutlet ActivityAnimationHolderView *animeView;
 
 @end
 
@@ -32,7 +33,28 @@
 -(void)viewDidAppear:(BOOL)animated{
     
     [super viewDidAppear:animated];
+    
       
+}
+
+-(IBAction)move:(UISlider *)sender{
+    
+    _animeView.moveLevel=sender.value;
+    [_animeView setNeedsDisplay];
+    
+}
+-(IBAction)exercise:(UISlider *)sender{
+    
+    _animeView.exerciseLevel=sender.value;
+    [_animeView setNeedsDisplay];
+
+    
+}
+-(IBAction)stand:(UISlider *)sender{
+    
+    _animeView.standLevel=sender.value;
+    [_animeView setNeedsDisplay];
+
 }
 
 - (void)didReceiveMemoryWarning {

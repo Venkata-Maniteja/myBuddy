@@ -113,6 +113,8 @@
     
     cell.backgroundColor=[self convertStringToColor:dataDisplay.colorName];
     cell.fileName.text = dataDisplay.fileName;
+//    cell.fileName.tintColor=[UIColor whiteColor];
+    cell.fileName.textColor=[UIColor whiteColor];
     cell.icon.hidden=YES;
     
     return cell;

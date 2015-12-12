@@ -101,7 +101,7 @@
         
         [self showAlertWithTitle:@"Please enter all details to save" withMessage:@"One or more fields are empty."];
     }else{
-        [self showAlertWithTitle:@"Saved" withMessage:[NSString stringWithFormat:@"Do you want to add color to the item \n[%@]",_nameField.text]];
+        [self showAlertWithTitle:@"Add Color" withMessage:[NSString stringWithFormat:@"Do you want to add color to the item \n[%@]",_nameField.text]];
 
     }
     
@@ -159,6 +159,8 @@
     _passwordField.text=@"";
     _hintField.text=@"";
     
+    [self showAlertWithTitle:@"Success!" withMessage:@"Data Saved"];
+    
 
     
 }
@@ -177,46 +179,39 @@
     
     UIAlertAction *ok=[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
-        [aC dismissViewControllerAnimated:YES completion:nil];
-        
-        //present the picker view
-        
-        if ([title isEqualToString:@"Saved"]) {
-             [self addPicker];
-        }
-        
-        
+                [aC dismissViewControllerAnimated:YES completion:nil];
+                
+                //present the picker view
+                
+                if ([title isEqualToString:@"Add Color"]) {
+                     [self addPicker];
+                }
         
     }];
      
     UIAlertAction *cancel=[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         
-        [aC dismissViewControllerAnimated:YES completion:nil];
-        
-        //save data with dummy color
-        if ([title isEqualToString:@"Saved"]) {
-              [self insertDataWithColor:NO];
-        }
-        
+                [aC dismissViewControllerAnimated:YES completion:nil];
+                
+                //save data with dummy color
+                if ([title isEqualToString:@"Add Color"]) {
+                      [self insertDataWithColor:NO];
+                }
     }];
     
-    [aC addAction:ok];
-    [aC addAction:cancel];
+            [aC addAction:ok];
+            [aC addAction:cancel];
     
     [self presentViewController:aC animated:YES completion:nil];
 }
 
--(void)action:(id)sender{
-    
-    
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-
+//TODO: show alert after data save, and clear button badge icon
 
 /*
 #pragma mark - Navigation

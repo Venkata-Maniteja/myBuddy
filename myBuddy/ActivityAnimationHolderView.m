@@ -17,7 +17,7 @@
 - (void)drawRect:(CGRect)rect {
     // Drawing code
     
-    [ActivityAnimationView drawCanvas1];
+    [ActivityAnimationView drawActivityCompositionWithMoveLevel:_moveLevel exersizeLevel:_exerciseLevel standLevel:_standLevel];
 }
 
 
