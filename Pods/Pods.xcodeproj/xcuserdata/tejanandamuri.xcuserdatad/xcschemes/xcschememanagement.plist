@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Color-Picker-for-iOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>FMDB.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>MagicalRecord.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -22,7 +32,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>7DB726C293FF63D27A2B8051108A4ACA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A78C3A05A5998BFD2C6B372328EAE74</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9F12FB4A63E20F601CFB2E64A65B57C1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D54AB3ECEB9A8FBA15D4F73CBE326692</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F685AB6203CF7F80DF7C12A96902694C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

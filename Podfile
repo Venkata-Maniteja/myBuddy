@@ -6,7 +6,8 @@
 target 'myBuddy' do
 
 
-pod 'MagicalRecord'
+pod 'FMDB'
+pod "Color-Picker-for-iOS", "~> 2.0"
 
 
 end
