@@ -29,6 +29,7 @@
 		B8192C9B1C0E319D006E8E7E /* LoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B8192C9A1C0E319D006E8E7E /* LoginTextField.m */; };
 		B81F169A1C1A2C2200E4EFD7 /* ColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B81F16991C1A2C2200E4EFD7 /* ColorPickerViewController.m */; };
 		B83B3A481C15D4CA00C8F307 /* BuddyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B83B3A471C15D4CA00C8F307 /* BuddyManager.m */; };
+		B83EDB5B1C1F6D36008A9BB6 /* dot.png in Resources */ = {isa = PBXBuildFile; fileRef = B83EDB5A1C1F6D36008A9BB6 /* dot.png */; };
 		E50573241C1AE07F0081332E /* ActivityAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E50573231C1AE07F0081332E /* ActivityAnimationView.m */; };
 		E50573271C1AE3620081332E /* ActivityAnimationHolderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E50573261C1AE3620081332E /* ActivityAnimationHolderView.m */; };
 		E5D41D351C1904A200F01ADA /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D41D341C1904A200F01ADA /* ListTableViewCell.m */; };
@@ -73,6 +74,7 @@
 		B81F16991C1A2C2200E4EFD7 /* ColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerViewController.m; sourceTree = "<group>"; };
 		B83B3A461C15D4CA00C8F307 /* BuddyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuddyManager.h; sourceTree = "<group>"; };
 		B83B3A471C15D4CA00C8F307 /* BuddyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuddyManager.m; sourceTree = "<group>"; };
+		B83EDB5A1C1F6D36008A9BB6 /* dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot.png; sourceTree = "<group>"; };
 		D14065A071F8D4C71700CC4B /* Pods-myBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-myBuddy/Pods-myBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 		E50573221C1AE07F0081332E /* ActivityAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityAnimationView.h; sourceTree = SOURCE_ROOT; };
 		E50573231C1AE07F0081332E /* ActivityAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityAnimationView.m; sourceTree = SOURCE_ROOT; };
@@ -201,6 +203,7 @@
 				B8192C971C0E26DD006E8E7E /* LoginViewController.m */,
 				B807DA151C18C90B00CC6539 /* ListViewController.h */,
 				B807DA161C18C90B00CC6539 /* ListViewController.m */,
+				B83EDB5A1C1F6D36008A9BB6 /* dot.png */,
 				5DE967B31C0EC6EB00DC62F9 /* CameraViewController.h */,
 				5DE967B41C0EC6EB00DC62F9 /* CameraViewController.m */,
 				E50573221C1AE07F0081332E /* ActivityAnimationView.h */,
@@ -290,6 +293,7 @@
 				B807DA111C18BBCF00CC6539 /* eyeMask.png in Resources */,
 				B800301C1C0F2B5A004B0565 /* Launch Screen.storyboard in Resources */,
 				B80D9D201C0C8CCE004A1FF6 /* Assets.xcassets in Resources */,
+				B83EDB5B1C1F6D36008A9BB6 /* dot.png in Resources */,
 				B80D9D1E1C0C8CCE004A1FF6 /* Main.storyboard in Resources */,
 				B800302A1C0F4DB7004B0565 /* Screenshot.png in Resources */,
 			);

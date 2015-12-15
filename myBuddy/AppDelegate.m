@@ -31,7 +31,6 @@
         [self createDatabase];
         
     }
-    NSLog(@"dataabase path is %@",_manager.dataBasePath);
     
     
     return YES;
